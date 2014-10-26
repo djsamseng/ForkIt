@@ -14,12 +14,17 @@
 		17635E5019F9CF5E00BAC03E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17635E4E19F9CF5E00BAC03E /* Main.storyboard */; };
 		17635E5219F9CF5E00BAC03E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17635E5119F9CF5E00BAC03E /* Images.xcassets */; };
 		17635E5519F9CF5E00BAC03E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17635E5319F9CF5E00BAC03E /* LaunchScreen.xib */; };
-		17635E6119F9CF6100BAC03E /* IEDForkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17635E6019F9CF6100BAC03E /* IEDForkTests.m */; };
 		17635E6B19F9CFDE00BAC03E /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17635E6A19F9CFDE00BAC03E /* CoreBluetooth.framework */; };
 		17635E6D19F9CFEB00BAC03E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17635E6C19F9CFEB00BAC03E /* UIKit.framework */; };
 		17635E6F19F9CFF400BAC03E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17635E6E19F9CFF400BAC03E /* Foundation.framework */; };
 		17635E7119F9CFFB00BAC03E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17635E7019F9CFFB00BAC03E /* CoreGraphics.framework */; };
 		17635E7719F9D70500BAC03E /* BLE.m in Sources */ = {isa = PBXBuildFile; fileRef = 17635E7419F9D06400BAC03E /* BLE.m */; };
+		A73A87CD19FAF43700339FF2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73A87CC19FAF43700339FF2 /* AudioToolbox.framework */; };
+		A73A87CF19FAF44800339FF2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73A87CE19FAF44800339FF2 /* AVFoundation.framework */; };
+		A73A87D519FD87F100339FF2 /* AcousticModelEnglish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A73A87D119FD87F100339FF2 /* AcousticModelEnglish.bundle */; };
+		A73A87D619FD87F100339FF2 /* AcousticModelSpanish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A73A87D219FD87F100339FF2 /* AcousticModelSpanish.bundle */; };
+		A73A87D719FD87F100339FF2 /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73A87D319FD87F100339FF2 /* OpenEars.framework */; };
+		A73A87D819FD87F100339FF2 /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73A87D419FD87F100339FF2 /* Slt.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,8 +50,6 @@
 		17635E5119F9CF5E00BAC03E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		17635E5419F9CF5E00BAC03E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		17635E5A19F9CF6100BAC03E /* IEDForkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IEDForkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		17635E5F19F9CF6100BAC03E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		17635E6019F9CF6100BAC03E /* IEDForkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IEDForkTests.m; sourceTree = "<group>"; };
 		17635E6A19F9CFDE00BAC03E /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		17635E6C19F9CFEB00BAC03E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		17635E6E19F9CFF400BAC03E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -54,6 +57,12 @@
 		17635E7319F9D06400BAC03E /* BLE.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLE.h; sourceTree = "<group>"; };
 		17635E7419F9D06400BAC03E /* BLE.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLE.m; sourceTree = "<group>"; };
 		17635E7519F9D06400BAC03E /* BLEDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLEDefines.h; sourceTree = "<group>"; };
+		A73A87CC19FAF43700339FF2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		A73A87CE19FAF44800339FF2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A73A87D119FD87F100339FF2 /* AcousticModelEnglish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AcousticModelEnglish.bundle; sourceTree = "<group>"; };
+		A73A87D219FD87F100339FF2 /* AcousticModelSpanish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AcousticModelSpanish.bundle; sourceTree = "<group>"; };
+		A73A87D319FD87F100339FF2 /* OpenEars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEars.framework; sourceTree = "<group>"; };
+		A73A87D419FD87F100339FF2 /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Slt.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +70,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A73A87D719FD87F100339FF2 /* OpenEars.framework in Frameworks */,
+				A73A87CF19FAF44800339FF2 /* AVFoundation.framework in Frameworks */,
+				A73A87CD19FAF43700339FF2 /* AudioToolbox.framework in Frameworks */,
 				17635E7119F9CFFB00BAC03E /* CoreGraphics.framework in Frameworks */,
+				A73A87D819FD87F100339FF2 /* Slt.framework in Frameworks */,
 				17635E6F19F9CFF400BAC03E /* Foundation.framework in Frameworks */,
 				17635E6D19F9CFEB00BAC03E /* UIKit.framework in Frameworks */,
 				17635E6B19F9CFDE00BAC03E /* CoreBluetooth.framework in Frameworks */,
@@ -81,13 +94,15 @@
 		17635E3519F9CF5B00BAC03E = {
 			isa = PBXGroup;
 			children = (
+				A73A87D019FD87F100339FF2 /* Framework */,
+				A73A87CE19FAF44800339FF2 /* AVFoundation.framework */,
+				A73A87CC19FAF43700339FF2 /* AudioToolbox.framework */,
 				17635E7219F9D06400BAC03E /* BLE */,
 				17635E7019F9CFFB00BAC03E /* CoreGraphics.framework */,
 				17635E6E19F9CFF400BAC03E /* Foundation.framework */,
 				17635E6C19F9CFEB00BAC03E /* UIKit.framework */,
 				17635E6A19F9CFDE00BAC03E /* CoreBluetooth.framework */,
 				17635E4019F9CF5B00BAC03E /* IEDFork */,
-				17635E5D19F9CF6100BAC03E /* IEDForkTests */,
 				17635E3F19F9CF5B00BAC03E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -126,23 +141,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		17635E5D19F9CF6100BAC03E /* IEDForkTests */ = {
-			isa = PBXGroup;
-			children = (
-				17635E6019F9CF6100BAC03E /* IEDForkTests.m */,
-				17635E5E19F9CF6100BAC03E /* Supporting Files */,
-			);
-			path = IEDForkTests;
-			sourceTree = "<group>";
-		};
-		17635E5E19F9CF6100BAC03E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				17635E5F19F9CF6100BAC03E /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		17635E7219F9D06400BAC03E /* BLE */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +149,17 @@
 				17635E7519F9D06400BAC03E /* BLEDefines.h */,
 			);
 			path = BLE;
+			sourceTree = "<group>";
+		};
+		A73A87D019FD87F100339FF2 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				A73A87D119FD87F100339FF2 /* AcousticModelEnglish.bundle */,
+				A73A87D219FD87F100339FF2 /* AcousticModelSpanish.bundle */,
+				A73A87D319FD87F100339FF2 /* OpenEars.framework */,
+				A73A87D419FD87F100339FF2 /* Slt.framework */,
+			);
+			path = Framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +243,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				17635E5019F9CF5E00BAC03E /* Main.storyboard in Resources */,
+				A73A87D619FD87F100339FF2 /* AcousticModelSpanish.bundle in Resources */,
+				A73A87D519FD87F100339FF2 /* AcousticModelEnglish.bundle in Resources */,
 				17635E5519F9CF5E00BAC03E /* LaunchScreen.xib in Resources */,
 				17635E5219F9CF5E00BAC03E /* Images.xcassets in Resources */,
 			);
@@ -265,7 +276,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17635E6119F9CF6100BAC03E /* IEDForkTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +389,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework",
+				);
 				INFOPLIST_FILE = IEDFork/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -390,6 +405,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework",
+				);
 				INFOPLIST_FILE = IEDFork/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -450,6 +470,7 @@
 				17635E6619F9CF6100BAC03E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		17635E6719F9CF6100BAC03E /* Build configuration list for PBXNativeTarget "IEDForkTests" */ = {
 			isa = XCConfigurationList;
@@ -458,6 +479,7 @@
 				17635E6919F9CF6100BAC03E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
