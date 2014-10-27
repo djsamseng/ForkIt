@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "IEDDataModel.h"
+#import "IEDAddEntryTableViewController.h"
 
 @interface ViewController ()
 
@@ -16,6 +17,8 @@
 @property (strong, nonatomic) IBOutlet UITextView *textReceived;
 @property (strong, nonatomic) IBOutlet UITextView *foodText;
 @property (strong, nonatomic) IBOutlet UIButton *connectButton;
+@property (nonatomic) int resistance;
+@property (nonatomic) int temperature;
 @property (strong, nonatomic) BLE *bleShield;
 @property (strong, nonatomic) IEDDataModel *dataModel;
 
@@ -27,6 +30,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.textReceived.text=NULL;
+    self.resistance = 0;
+    self.temperature = 0;
     
     //Bluetooth initialization
     self.bleShield = [[BLE alloc] init];
@@ -81,6 +86,15 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"AddEntrySegue"]) {
+        IEDAddEntryTableViewController *avc = [segue destinationViewController];
+        avc.dataModel = self.dataModel;
+        avc.resistance = self.resistance;
+        avc.temperature = self.temperature;
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -103,6 +117,17 @@
 {
     NSData *d = [NSData dataWithBytes:data length:length];
     NSString *s = [[NSString alloc] initWithData:d encoding:NSUTF8StringEncoding];
+    int resistanceEnd = [s rangeOfString:@"R"].location;
+    int temperatureEnd = [s rangeOfString:@"T"].location;
+    if (resistanceEnd != 0 && temperatureEnd > resistanceEnd) {
+        NSString *resistance = [s substringToIndex:resistanceEnd];
+        NSRange temperatureRange;
+        temperatureRange.location = resistanceEnd + 1;
+        temperatureRange.length = temperatureEnd - resistanceEnd - 1;
+        NSString *temperature = [s substringWithRange:temperatureRange];
+        self.temperature = [temperature intValue];
+        self.resistance = [resistance intValue];
+    }
     self.textReceived.text = s;
 }
 

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hnA-CS-lta">
     <dependencies>
         <deployment version="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Fork Buddy-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TtW-vO-2u0">
-                                <rect key="frame" x="131" y="32" width="59" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TtW-vO-2u0">
+                                <rect key="frame" x="131" y="65" width="59" height="30"/>
                                 <state key="normal" title="Connect">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -27,14 +27,23 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0xG-mC-Adq">
-                                <rect key="frame" x="40" y="260" width="240" height="191"/>
+                                <rect key="frame" x="41" y="306" width="239" height="145"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPP-Ye-CcT">
+                                <rect key="frame" x="126" y="268" width="68" height="30"/>
+                                <state key="normal" title="Add Entry">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="b4i-Bb-Sq6" kind="push" identifier="AddEntrySegue" id="j71-cv-stl"/>
+                                </connections>
+                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uwI-lm-RMX">
-                                <rect key="frame" x="27" y="60" width="267" height="168"/>
+                                <rect key="frame" x="27" y="92" width="267" height="168"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="168" id="nCa-vT-ecH"/>
@@ -46,13 +55,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="0xG-mC-Adq" firstAttribute="top" secondItem="cPP-Ye-CcT" secondAttribute="bottom" constant="8" id="3c1-1T-vRX"/>
+                            <constraint firstAttribute="centerX" secondItem="cPP-Ye-CcT" secondAttribute="centerX" id="3h8-1Z-wFT"/>
                             <constraint firstAttribute="centerX" secondItem="TtW-vO-2u0" secondAttribute="centerX" id="4en-Gb-R9d"/>
                             <constraint firstAttribute="centerX" secondItem="uwI-lm-RMX" secondAttribute="centerX" id="9he-Wq-KpN"/>
-                            <constraint firstItem="0xG-mC-Adq" firstAttribute="top" secondItem="uwI-lm-RMX" secondAttribute="bottom" constant="20" id="N6z-1w-BPB"/>
+                            <constraint firstItem="cPP-Ye-CcT" firstAttribute="top" secondItem="uwI-lm-RMX" secondAttribute="bottom" constant="20" id="HOr-rp-2Jm"/>
                             <constraint firstAttribute="centerX" secondItem="0xG-mC-Adq" secondAttribute="centerX" id="NSf-2B-njh"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="0xG-mC-Adq" secondAttribute="bottom" constant="20" id="flL-wE-Lkv"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="0xG-mC-Adq" secondAttribute="bottom" constant="30" id="kYL-bG-uaz"/>
+                            <constraint firstItem="uwI-lm-RMX" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="35" id="v0i-wH-FbP"/>
+                            <constraint firstItem="TtW-vO-2u0" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="z9g-If-HlJ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Fork Buddy" id="74m-rj-sqc"/>
                     <connections>
                         <outlet property="connectButton" destination="TtW-vO-2u0" id="mcb-cX-Kpi"/>
                         <outlet property="foodText" destination="0xG-mC-Adq" id="Rx0-oC-RvB"/>
@@ -61,6 +75,60 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="672" y="137"/>
+        </scene>
+        <!--Add Entry-->
+        <scene sceneID="OrZ-Te-06I">
+            <objects>
+                <tableViewController id="b4i-Bb-Sq6" customClass="IEDAddEntryTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="dB5-Na-7S2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="NIQ-nB-6qZ">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NIQ-nB-6qZ" id="aG7-lH-7h0">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="b4i-Bb-Sq6" id="tK3-J5-pKu"/>
+                            <outlet property="delegate" destination="b4i-Bb-Sq6" id="ibW-iq-z4Y"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Add Entry" id="WGt-ab-aQW">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="iWz-hu-Kek"/>
+                        <barButtonItem key="rightBarButtonItem" title="New Food" id="Uhm-Fl-QHd">
+                            <connections>
+                                <action selector="newFoodClicked:" destination="b4i-Bb-Sq6" id="snq-pc-bXF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Xj-Rs-RYl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1058" y="137"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="l45-O5-T7O">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hnA-CS-lta" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PUP-DN-K5r">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="CHa-ep-svS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iPW-pK-g1Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="264" y="137"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
