@@ -7,14 +7,17 @@
 //
 
 #import "ViewController.h"
+#import "IEDDataModel.h"
 
 @interface ViewController ()
 
 
 
 @property (strong, nonatomic) IBOutlet UITextView *textReceived;
+@property (strong, nonatomic) IBOutlet UITextView *foodText;
 @property (strong, nonatomic) IBOutlet UIButton *connectButton;
 @property (strong, nonatomic) BLE *bleShield;
+@property (strong, nonatomic) IEDDataModel *dataModel;
 
 
 @end
@@ -28,6 +31,17 @@
     self.bleShield = [[BLE alloc] init];
     [self.bleShield controlSetup];
     self.bleShield.delegate = self;
+    
+    self.dataModel = [[IEDDataModel alloc] init];
+    if ([self.dataModel.allItems count] == 0) {
+        IEDFood *newFood = [self.dataModel createFood];
+        newFood.foodName = @"Test food";
+    }
+    NSMutableString *allFoods = [[NSMutableString alloc] init];
+    for (IEDFood *food in self.dataModel.allItems) {
+        [allFoods appendFormat:@" %@", food.foodName];
+    }
+    self.foodText.text = allFoods;
     
     
     LanguageModelGenerator *lmGenerator = [[LanguageModelGenerator alloc] init];
