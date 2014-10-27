@@ -28,14 +28,17 @@
     [super viewDidLoad];
     self.textReceived.text=NULL;
     
+    //Bluetooth initialization
     self.bleShield = [[BLE alloc] init];
     [self.bleShield controlSetup];
     self.bleShield.delegate = self;
     
+    //Model & Core Data intitialization
     self.dataModel = [[IEDDataModel alloc] init];
     if ([self.dataModel.allItems count] == 0) {
         IEDFood *newFood = [self.dataModel createFood];
         newFood.foodName = @"Test food";
+        [self.dataModel saveChanges];
     }
     NSMutableString *allFoods = [[NSMutableString alloc] init];
     for (IEDFood *food in self.dataModel.allItems) {
@@ -43,7 +46,7 @@
     }
     self.foodText.text = allFoods;
     
-    
+    //Voice commands initialization
     LanguageModelGenerator *lmGenerator = [[LanguageModelGenerator alloc] init];
     NSArray* words = [NSArray arrayWithObjects:@"YES", @"CONNECT", nil];
     NSString*name = @"recognitionwords";
@@ -83,6 +86,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Bluetooth
 - (void) connectionTimer:(NSTimer *)timer
 {
     if (self.bleShield.peripherals.count > 0)
@@ -141,6 +145,8 @@ NSTimer *rssiTimer;
     [NSTimer scheduledTimerWithTimeInterval:(float)3.0 target:self selector:@selector(connectionTimer:) userInfo:nil repeats:NO];
     
 }
+
+#pragma mark - Voice Commands
 
 - (FliteController *)flite {  //controls the voice
 	if (self.fliteController == nil) {
