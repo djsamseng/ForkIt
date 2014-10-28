@@ -7,9 +7,12 @@
 //
 
 #import "IEDAddEntryTableViewController.h"
+#import "IEDFoodAttribute.h"
 
 
 @interface IEDAddEntryTableViewController () <UIAlertViewDelegate>
+
+@property (strong, nonatomic) IEDFood *selectedFood;
 
 @end
 
@@ -35,15 +38,37 @@
     alert.alertViewStyle = UIAlertViewStylePlainTextInput;
     UITextField *alertTextField = [alert textFieldAtIndex:0];
     alertTextField.placeholder = @"New food";
+    [alert setTag:1];
     [alert show];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if (buttonIndex == 1) {
-        NSString *textEntered = [[alertView textFieldAtIndex:0] text];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Pressed Add!" message:textEntered delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-        [alert show];
+    if (alertView.tag == 1) {
+        if (buttonIndex == 1) {
+            NSString *textEntered = [[alertView textFieldAtIndex:0] text];
+            if ([textEntered length] > 0 && ![self.dataModel foodExists:textEntered]) {
+                IEDFood *newFood = [self.dataModel createFood];
+                newFood.foodName = textEntered;
+                [self.dataModel saveChanges];
+            }
+        }
+    } else if (alertView.tag == 2) {
+        
+    } else if (alertView.tag == 3) {
+        if (buttonIndex == 1 && self.selectedFood != nil) {
+            [self addAttributeToFood:self.selectedFood];
+        } else {
+            self.selectedFood = nil;
+        }
     }
+}
+
+- (void)addAttributeToFood:(IEDFood *)foodType {
+    IEDFoodAttribute *attribute = [self.dataModel createAttribute:self.selectedFood];
+    attribute.resistance = self.resistance;
+    attribute.temperature = self.temperature;
+    [self.dataModel saveChanges];
+
 }
 
 @synthesize resistance = _resistance;
@@ -82,10 +107,17 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
     IEDFood *foodItem = [self.dataModel.allItems objectAtIndex:indexPath.row];
-    cell.textLabel.text = foodItem.foodName;
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ %d", foodItem.foodName, foodItem.attributeValues.count];
     // Configure the cell...
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.selectedFood = [self.dataModel.allItems objectAtIndex:indexPath.row];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Are you sure?" message:[NSString stringWithFormat:@"Confirm %dΩ %dC for %@", self.resistance, self.temperature, self.selectedFood.foodName] delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Confirm", nil];
+    [alert setTag:3];
+    [alert show];
 }
 
 /*

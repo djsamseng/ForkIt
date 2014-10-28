@@ -27,8 +27,18 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0xG-mC-Adq">
-                                <rect key="frame" x="41" y="306" width="239" height="145"/>
+                                <rect key="frame" x="41" y="371" width="239" height="80"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uwI-lm-RMX">
+                                <rect key="frame" x="27" y="92" width="267" height="168"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="168" id="nCa-vT-ecH"/>
+                                </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -42,26 +52,27 @@
                                     <segue destination="b4i-Bb-Sq6" kind="push" identifier="AddEntrySegue" id="j71-cv-stl"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uwI-lm-RMX">
-                                <rect key="frame" x="27" y="92" width="267" height="168"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="168" id="nCa-vT-ecH"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kD-pc-EZ1">
+                                <rect key="frame" x="135" y="306" width="51" height="30"/>
+                                <state key="normal" title="Identify">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="identifyPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dLL-gj-12o"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="0xG-mC-Adq" firstAttribute="top" secondItem="cPP-Ye-CcT" secondAttribute="bottom" constant="8" id="3c1-1T-vRX"/>
                             <constraint firstAttribute="centerX" secondItem="cPP-Ye-CcT" secondAttribute="centerX" id="3h8-1Z-wFT"/>
                             <constraint firstAttribute="centerX" secondItem="TtW-vO-2u0" secondAttribute="centerX" id="4en-Gb-R9d"/>
                             <constraint firstAttribute="centerX" secondItem="uwI-lm-RMX" secondAttribute="centerX" id="9he-Wq-KpN"/>
+                            <constraint firstItem="0xG-mC-Adq" firstAttribute="top" secondItem="5kD-pc-EZ1" secondAttribute="bottom" constant="20" id="Enu-T4-PRF"/>
                             <constraint firstItem="cPP-Ye-CcT" firstAttribute="top" secondItem="uwI-lm-RMX" secondAttribute="bottom" constant="20" id="HOr-rp-2Jm"/>
                             <constraint firstAttribute="centerX" secondItem="0xG-mC-Adq" secondAttribute="centerX" id="NSf-2B-njh"/>
+                            <constraint firstItem="5kD-pc-EZ1" firstAttribute="top" secondItem="cPP-Ye-CcT" secondAttribute="bottom" constant="8" id="dSx-U1-fdw"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="0xG-mC-Adq" secondAttribute="bottom" constant="30" id="kYL-bG-uaz"/>
+                            <constraint firstAttribute="centerX" secondItem="5kD-pc-EZ1" secondAttribute="centerX" id="tih-Pg-Fk1"/>
                             <constraint firstItem="uwI-lm-RMX" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="35" id="v0i-wH-FbP"/>
                             <constraint firstItem="TtW-vO-2u0" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="z9g-If-HlJ"/>
                         </constraints>

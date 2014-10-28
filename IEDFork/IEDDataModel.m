@@ -49,6 +49,14 @@
     }
     return successful;
 }
+- (BOOL)foodExists:(NSString *)foodName {
+    for (IEDFood *food in self.allItems) {
+        if ([food.foodName isEqualToString:foodName]) {
+            return true;
+        }
+    }
+    return false;
+}
 
 - (void)loadAllItems
 {
@@ -83,10 +91,64 @@
     return newFood;
 }
 
+- (IEDFoodAttribute *)createAttribute:(IEDFood *)foodType {
+    IEDFoodAttribute *attribute = [NSEntityDescription insertNewObjectForEntityForName:@"IEDFoodAttribute" inManagedObjectContext:self.context];
+    [foodType addAttributeValuesObject:attribute];
+    return attribute;
+}
+
 - (void)removeFood:(IEDFood *)foodType
 {
     [self.context deleteObject:foodType];
     [self.allItems removeObjectIdenticalTo:foodType];
+}
+
+- (NSString *)identifyFood:(int)resistance {
+    NSMutableDictionary *attributes = [[NSMutableDictionary alloc] init];
+    for (IEDFood *f in self.allItems) {
+        for (IEDFoodAttribute *a in f.attributeValues) {
+            if (abs(a.resistance - resistance) < 200) {
+                if ([attributes objectForKey:f.foodName] == nil) {
+                    [attributes setObject:[NSNumber numberWithInt:1] forKey:f.foodName];
+                } else {
+                    int count = [attributes[f.foodName] intValue];
+                    attributes[f.foodName] = [NSNumber numberWithInt:count + 1];
+                }
+            }
+        }
+    }
+    if ([attributes count] == 0) {
+        return @"None found within 200";
+    } else {
+        NSArray *sortedFoods = [attributes keysSortedByValueUsingComparator:^(id obj1, id obj2) {
+            if ([obj1 integerValue] > [obj2 integerValue]) {
+                return (NSComparisonResult)NSOrderedAscending;
+            } else if ([obj1 integerValue] < [obj2 integerValue]) {
+                return (NSComparisonResult)NSOrderedDescending;
+            }
+            return (NSComparisonResult)NSOrderedSame;
+        }];
+        if ([sortedFoods count] == 1) {
+            return [sortedFoods objectAtIndex:0];
+        } else if ([sortedFoods count] == 2) {
+            NSString *food0 = [sortedFoods objectAtIndex:0];
+            NSString *food1 = [sortedFoods objectAtIndex:1];
+            if ([attributes[food0] intValue] > [attributes[food1] intValue]) {
+                return [sortedFoods objectAtIndex:0];
+            } else {
+                return @"Unable to determine";
+            }
+        } else {
+            NSString *food0 = [sortedFoods objectAtIndex:0];
+            NSString *food1 = [sortedFoods objectAtIndex:1];
+            NSString *food2 = [sortedFoods objectAtIndex:2];
+            if ([attributes[food0] intValue] > [attributes[food1] intValue] + [attributes[food2] intValue]) {
+                return [sortedFoods objectAtIndex:0];
+            } else {
+                return @"Unable to determine";
+            }
+        }
+    }
 }
 
 - (NSString *)itemArchivePath

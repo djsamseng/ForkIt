@@ -99,6 +99,10 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)identifyPressed:(id)sender {
+    NSString *result = [self.dataModel identifyFood:self.resistance];
+    self.foodText.text = result;
+}
 
 #pragma mark - Bluetooth
 - (void) connectionTimer:(NSTimer *)timer
@@ -153,6 +157,7 @@ NSTimer *rssiTimer;
 
 -(void)bleDidUpdateRSSI:(NSNumber *)rssi {
 }
+
 - (IBAction)bleConnectPressed:(id)sender {
     if (self.bleShield.activePeripheral)
     {

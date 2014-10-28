@@ -16,9 +16,4 @@
 @dynamic temperature;
 @dynamic relationship;
 
-- (void)awakeFromInsert
-{
-    [super awakeFromInsert];
-}
-
 @end
