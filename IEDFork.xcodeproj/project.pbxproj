@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		174AB8D219FFE07200AEEB12 /* IEDNNModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 174AB8D119FFE07200AEEB12 /* IEDNNModel.m */; };
 		174E135F19FF074D000727F2 /* IEDAddEntryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 174E135E19FF074D000727F2 /* IEDAddEntryTableViewController.m */; };
 		17635E4419F9CF5C00BAC03E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17635E4319F9CF5C00BAC03E /* main.m */; };
 		17635E4719F9CF5D00BAC03E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17635E4619F9CF5D00BAC03E /* AppDelegate.m */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		174AB8D019FFE07200AEEB12 /* IEDNNModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEDNNModel.h; sourceTree = "<group>"; };
+		174AB8D119FFE07200AEEB12 /* IEDNNModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEDNNModel.m; sourceTree = "<group>"; };
 		174E135D19FF074D000727F2 /* IEDAddEntryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEDAddEntryTableViewController.h; sourceTree = "<group>"; };
 		174E135E19FF074D000727F2 /* IEDAddEntryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEDAddEntryTableViewController.m; sourceTree = "<group>"; };
 		17635E3E19F9CF5B00BAC03E /* IEDFork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IEDFork.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,6 +173,8 @@
 			children = (
 				178E161C19FDC691001E79A4 /* IEDDataModel.h */,
 				178E161D19FDC691001E79A4 /* IEDDataModel.m */,
+				174AB8D019FFE07200AEEB12 /* IEDNNModel.h */,
+				174AB8D119FFE07200AEEB12 /* IEDNNModel.m */,
 				178E160419FDBF43001E79A4 /* IEDFoodItemModel.xcdatamodeld */,
 				178E161619FDC525001E79A4 /* IEDFoodAttribute.h */,
 				178E161719FDC525001E79A4 /* IEDFoodAttribute.m */,
@@ -296,6 +301,7 @@
 				178E160619FDBF43001E79A4 /* IEDFoodItemModel.xcdatamodeld in Sources */,
 				17635E4719F9CF5D00BAC03E /* AppDelegate.m in Sources */,
 				178E161E19FDC691001E79A4 /* IEDDataModel.m in Sources */,
+				174AB8D219FFE07200AEEB12 /* IEDNNModel.m in Sources */,
 				178E161819FDC525001E79A4 /* IEDFoodAttribute.m in Sources */,
 				17635E4D19F9CF5E00BAC03E /* ViewController.m in Sources */,
 				174E135F19FF074D000727F2 /* IEDAddEntryTableViewController.m in Sources */,
