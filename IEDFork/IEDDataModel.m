@@ -107,7 +107,7 @@
     NSMutableDictionary *attributes = [[NSMutableDictionary alloc] init];
     for (IEDFood *f in self.allItems) {
         for (IEDFoodAttribute *a in f.attributeValues) {
-            if (abs(a.resistance - resistance) < 200) {
+            if (abs(a.resistance - resistance) < 500) {
                 if ([attributes objectForKey:f.foodName] == nil) {
                     [attributes setObject:[NSNumber numberWithInt:1] forKey:f.foodName];
                 } else {
@@ -149,6 +149,7 @@
             }
         }
     }
+    return @"Error";
 }
 
 - (NSString *)itemArchivePath

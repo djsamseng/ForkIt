@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		174372611A03005C006A37EC /* ECPercentDrivenInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 174372551A03005C006A37EC /* ECPercentDrivenInteractiveTransition.m */; };
+		174372621A03005C006A37EC /* ECSlidingAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 174372571A03005C006A37EC /* ECSlidingAnimationController.m */; };
+		174372631A03005C006A37EC /* ECSlidingInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 1743725A1A03005C006A37EC /* ECSlidingInteractiveTransition.m */; };
+		174372641A03005C006A37EC /* ECSlidingSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1743725C1A03005C006A37EC /* ECSlidingSegue.m */; };
+		174372651A03005C006A37EC /* ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1743725E1A03005C006A37EC /* ECSlidingViewController.m */; };
+		174372661A03005C006A37EC /* UIViewController+ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 174372601A03005C006A37EC /* UIViewController+ECSlidingViewController.m */; };
 		174AB8D219FFE07200AEEB12 /* IEDNNModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 174AB8D119FFE07200AEEB12 /* IEDNNModel.m */; };
 		174E135F19FF074D000727F2 /* IEDAddEntryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 174E135E19FF074D000727F2 /* IEDAddEntryTableViewController.m */; };
 		17635E4419F9CF5C00BAC03E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17635E4319F9CF5C00BAC03E /* main.m */; };
@@ -24,6 +30,9 @@
 		178E161819FDC525001E79A4 /* IEDFoodAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 178E161719FDC525001E79A4 /* IEDFoodAttribute.m */; };
 		178E161B19FDC54F001E79A4 /* IEDFood.m in Sources */ = {isa = PBXBuildFile; fileRef = 178E161A19FDC54F001E79A4 /* IEDFood.m */; };
 		178E161E19FDC691001E79A4 /* IEDDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 178E161D19FDC691001E79A4 /* IEDDataModel.m */; };
+		17B5F2611A0307FC00D5B9CE /* IEDMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5F2601A0307FC00D5B9CE /* IEDMenuTableViewController.m */; };
+		17BD9DCF1A030D8100E31CB8 /* IEDBluetoothBLE.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BD9DCE1A030D8100E31CB8 /* IEDBluetoothBLE.m */; };
+		17BD9DD51A0316BC00E31CB8 /* IEDMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BD9DD41A0316BC00E31CB8 /* IEDMainViewController.m */; };
 		A73A87CD19FAF43700339FF2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73A87CC19FAF43700339FF2 /* AudioToolbox.framework */; };
 		A73A87CF19FAF44800339FF2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73A87CE19FAF44800339FF2 /* AVFoundation.framework */; };
 		A73A87D519FD87F100339FF2 /* AcousticModelEnglish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A73A87D119FD87F100339FF2 /* AcousticModelEnglish.bundle */; };
@@ -43,6 +52,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		174372541A03005C006A37EC /* ECPercentDrivenInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECPercentDrivenInteractiveTransition.h; sourceTree = "<group>"; };
+		174372551A03005C006A37EC /* ECPercentDrivenInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECPercentDrivenInteractiveTransition.m; sourceTree = "<group>"; };
+		174372561A03005C006A37EC /* ECSlidingAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingAnimationController.h; sourceTree = "<group>"; };
+		174372571A03005C006A37EC /* ECSlidingAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingAnimationController.m; sourceTree = "<group>"; };
+		174372581A03005C006A37EC /* ECSlidingConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingConstants.h; sourceTree = "<group>"; };
+		174372591A03005C006A37EC /* ECSlidingInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingInteractiveTransition.h; sourceTree = "<group>"; };
+		1743725A1A03005C006A37EC /* ECSlidingInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingInteractiveTransition.m; sourceTree = "<group>"; };
+		1743725B1A03005C006A37EC /* ECSlidingSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingSegue.h; sourceTree = "<group>"; };
+		1743725C1A03005C006A37EC /* ECSlidingSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingSegue.m; sourceTree = "<group>"; };
+		1743725D1A03005C006A37EC /* ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingViewController.h; sourceTree = "<group>"; };
+		1743725E1A03005C006A37EC /* ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingViewController.m; sourceTree = "<group>"; };
+		1743725F1A03005C006A37EC /* UIViewController+ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ECSlidingViewController.h"; sourceTree = "<group>"; };
+		174372601A03005C006A37EC /* UIViewController+ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ECSlidingViewController.m"; sourceTree = "<group>"; };
 		174AB8D019FFE07200AEEB12 /* IEDNNModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEDNNModel.h; sourceTree = "<group>"; };
 		174AB8D119FFE07200AEEB12 /* IEDNNModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEDNNModel.m; sourceTree = "<group>"; };
 		174E135D19FF074D000727F2 /* IEDAddEntryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEDAddEntryTableViewController.h; sourceTree = "<group>"; };
@@ -72,6 +94,13 @@
 		178E161A19FDC54F001E79A4 /* IEDFood.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IEDFood.m; path = ../IEDFood.m; sourceTree = "<group>"; };
 		178E161C19FDC691001E79A4 /* IEDDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEDDataModel.h; sourceTree = "<group>"; };
 		178E161D19FDC691001E79A4 /* IEDDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEDDataModel.m; sourceTree = "<group>"; };
+		17B5F25F1A0307FC00D5B9CE /* IEDMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEDMenuTableViewController.h; sourceTree = "<group>"; };
+		17B5F2601A0307FC00D5B9CE /* IEDMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEDMenuTableViewController.m; sourceTree = "<group>"; };
+		17BD9DCD1A030D8100E31CB8 /* IEDBluetoothBLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEDBluetoothBLE.h; sourceTree = "<group>"; };
+		17BD9DCE1A030D8100E31CB8 /* IEDBluetoothBLE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEDBluetoothBLE.m; sourceTree = "<group>"; };
+		17BD9DD01A030FF000E31CB8 /* IEDProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEDProtocols.h; sourceTree = "<group>"; };
+		17BD9DD31A0316BC00E31CB8 /* IEDMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEDMainViewController.h; sourceTree = "<group>"; };
+		17BD9DD41A0316BC00E31CB8 /* IEDMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEDMainViewController.m; sourceTree = "<group>"; };
 		A73A87CC19FAF43700339FF2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		A73A87CE19FAF44800339FF2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A73A87D119FD87F100339FF2 /* AcousticModelEnglish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AcousticModelEnglish.bundle; sourceTree = "<group>"; };
@@ -106,9 +135,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		174372531A03005C006A37EC /* ECSlidingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				174372541A03005C006A37EC /* ECPercentDrivenInteractiveTransition.h */,
+				174372551A03005C006A37EC /* ECPercentDrivenInteractiveTransition.m */,
+				174372561A03005C006A37EC /* ECSlidingAnimationController.h */,
+				174372571A03005C006A37EC /* ECSlidingAnimationController.m */,
+				174372581A03005C006A37EC /* ECSlidingConstants.h */,
+				174372591A03005C006A37EC /* ECSlidingInteractiveTransition.h */,
+				1743725A1A03005C006A37EC /* ECSlidingInteractiveTransition.m */,
+				1743725B1A03005C006A37EC /* ECSlidingSegue.h */,
+				1743725C1A03005C006A37EC /* ECSlidingSegue.m */,
+				1743725D1A03005C006A37EC /* ECSlidingViewController.h */,
+				1743725E1A03005C006A37EC /* ECSlidingViewController.m */,
+				1743725F1A03005C006A37EC /* UIViewController+ECSlidingViewController.h */,
+				174372601A03005C006A37EC /* UIViewController+ECSlidingViewController.m */,
+			);
+			path = ECSlidingViewController;
+			sourceTree = "<group>";
+		};
 		17635E3519F9CF5B00BAC03E = {
 			isa = PBXGroup;
 			children = (
+				174372531A03005C006A37EC /* ECSlidingViewController */,
 				A73A87D019FD87F100339FF2 /* Framework */,
 				A73A87CE19FAF44800339FF2 /* AVFoundation.framework */,
 				A73A87CC19FAF43700339FF2 /* AudioToolbox.framework */,
@@ -138,7 +188,14 @@
 				17635E4619F9CF5D00BAC03E /* AppDelegate.m */,
 				17635E4B19F9CF5E00BAC03E /* ViewController.h */,
 				17635E4C19F9CF5E00BAC03E /* ViewController.m */,
+				17BD9DD01A030FF000E31CB8 /* IEDProtocols.h */,
+				17BD9DCD1A030D8100E31CB8 /* IEDBluetoothBLE.h */,
+				17BD9DCE1A030D8100E31CB8 /* IEDBluetoothBLE.m */,
 				17635E4E19F9CF5E00BAC03E /* Main.storyboard */,
+				17BD9DD31A0316BC00E31CB8 /* IEDMainViewController.h */,
+				17BD9DD41A0316BC00E31CB8 /* IEDMainViewController.m */,
+				17B5F25F1A0307FC00D5B9CE /* IEDMenuTableViewController.h */,
+				17B5F2601A0307FC00D5B9CE /* IEDMenuTableViewController.m */,
 				174E135D19FF074D000727F2 /* IEDAddEntryTableViewController.h */,
 				174E135E19FF074D000727F2 /* IEDAddEntryTableViewController.m */,
 				17635E5119F9CF5E00BAC03E /* Images.xcassets */,
@@ -297,15 +354,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				174372631A03005C006A37EC /* ECSlidingInteractiveTransition.m in Sources */,
+				17BD9DCF1A030D8100E31CB8 /* IEDBluetoothBLE.m in Sources */,
 				17635E7719F9D70500BAC03E /* BLE.m in Sources */,
 				178E160619FDBF43001E79A4 /* IEDFoodItemModel.xcdatamodeld in Sources */,
 				17635E4719F9CF5D00BAC03E /* AppDelegate.m in Sources */,
+				174372611A03005C006A37EC /* ECPercentDrivenInteractiveTransition.m in Sources */,
+				17BD9DD51A0316BC00E31CB8 /* IEDMainViewController.m in Sources */,
 				178E161E19FDC691001E79A4 /* IEDDataModel.m in Sources */,
 				174AB8D219FFE07200AEEB12 /* IEDNNModel.m in Sources */,
 				178E161819FDC525001E79A4 /* IEDFoodAttribute.m in Sources */,
+				174372621A03005C006A37EC /* ECSlidingAnimationController.m in Sources */,
 				17635E4D19F9CF5E00BAC03E /* ViewController.m in Sources */,
+				17B5F2611A0307FC00D5B9CE /* IEDMenuTableViewController.m in Sources */,
+				174372641A03005C006A37EC /* ECSlidingSegue.m in Sources */,
+				174372651A03005C006A37EC /* ECSlidingViewController.m in Sources */,
 				174E135F19FF074D000727F2 /* IEDAddEntryTableViewController.m in Sources */,
 				178E161B19FDC54F001E79A4 /* IEDFood.m in Sources */,
+				174372661A03005C006A37EC /* UIViewController+ECSlidingViewController.m in Sources */,
 				17635E4419F9CF5C00BAC03E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

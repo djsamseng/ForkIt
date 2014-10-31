@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BLE.h"
+#import "IEDProtocols.h"
 
 
 #import <Slt/Slt.h>
@@ -21,7 +21,8 @@
 
 #import <OpenEars/OpenEarsEventsObserver.h>
 
-@interface ViewController : UIViewController <BLEDelegate, OpenEarsEventsObserverDelegate>     @property (strong, nonatomic) FliteController *fliteController;
+@interface ViewController : UIViewController < OpenEarsEventsObserverDelegate, IEDBluetoothProtocols>
+    @property (strong, nonatomic) FliteController *fliteController;
     @property (strong, nonatomic) Slt *slt;
     @property (strong, nonatomic) PocketsphinxController *pocketsphinxController;
     @property (strong, nonatomic) OpenEarsEventsObserver *openEarsEventsObserver;

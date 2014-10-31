@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "IEDDataModel.h"
+#import "IEDBluetoothBLE.h"
 #import "IEDAddEntryTableViewController.h"
 
 @interface ViewController ()
@@ -19,24 +20,25 @@
 @property (strong, nonatomic) IBOutlet UIButton *connectButton;
 @property (nonatomic) int resistance;
 @property (nonatomic) int temperature;
-@property (strong, nonatomic) BLE *bleShield;
-@property (strong, nonatomic) IEDDataModel *dataModel;
 
+@property (strong, nonatomic) IEDDataModel *dataModel;
+@property (strong, nonatomic) IEDBluetoothBLE *bluetooth;
 
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
+    NSLog(@"VIEW DID LOAD CALLED");
     [super viewDidLoad];
     self.textReceived.text=NULL;
     self.resistance = 0;
     self.temperature = 0;
     
-    //Bluetooth initialization
-    self.bleShield = [[BLE alloc] init];
-    [self.bleShield controlSetup];
-    self.bleShield.delegate = self;
+    if (self.bluetooth == nil) {
+        self.bluetooth = [[IEDBluetoothBLE alloc] init];
+        self.bluetooth.delegate = self;
+    }
     
     //Model & Core Data intitialization
     self.dataModel = [[IEDDataModel alloc] init];
@@ -51,7 +53,7 @@
     }
     self.foodText.text = allFoods;
     
-    //Voice commands initialization
+    /*//Voice commands initialization
     LanguageModelGenerator *lmGenerator = [[LanguageModelGenerator alloc] init];
     NSArray* words = [NSArray arrayWithObjects:@"YES", @"CONNECT", nil];
     NSString*name = @"recognitionwords";
@@ -76,11 +78,11 @@
     
     [self.openEars setDelegate:self];
     
-    [self.pocket startListeningWithLanguageModelAtPath:lmPath dictionaryAtPath:dicPath acousticModelAtPath:[AcousticModel pathToModel:@"AcousticModelEnglish"] languageModelIsJSGF:NO];
+    [self.pocket startListeningWithLanguageModelAtPath:lmPath dictionaryAtPath:dicPath acousticModelAtPath:[AcousticModel pathToModel:@"AcousticModelEnglish"] languageModelIsJSGF:NO];*/
     
   
     
-    [self.flite say:@"For instructions say yes" withVoice:self.s];
+    //[self.flite say:@"For instructions say yes" withVoice:self.s];
     
     
     // Do any additional setup after loading the view, typically from a nib.
@@ -104,77 +106,29 @@
     self.foodText.text = result;
 }
 
-#pragma mark - Bluetooth
-- (void) connectionTimer:(NSTimer *)timer
-{
-    if (self.bleShield.peripherals.count > 0)
-    {
-        [self.bleShield connectPeripheral:[self.bleShield.peripherals objectAtIndex:0]];
-    }
-    else
-    {
-        
-    }
-}
-
-- (void)bleDidReceiveData:(unsigned char *)data length:(int)length
-{
-    NSData *d = [NSData dataWithBytes:data length:length];
-    NSString *s = [[NSString alloc] initWithData:d encoding:NSUTF8StringEncoding];
-    int resistanceEnd = [s rangeOfString:@"R"].location;
-    int temperatureEnd = [s rangeOfString:@"T"].location;
-    if (resistanceEnd != 0 && temperatureEnd > resistanceEnd) {
-        NSString *resistance = [s substringToIndex:resistanceEnd];
-        NSRange temperatureRange;
-        temperatureRange.location = resistanceEnd + 1;
-        temperatureRange.length = temperatureEnd - resistanceEnd - 1;
-        NSString *temperature = [s substringWithRange:temperatureRange];
-        self.temperature = [temperature intValue];
-        self.resistance = [resistance intValue];
-    }
-    self.textReceived.text = s;
-}
-
-NSTimer *rssiTimer;
-
-- (void)readRSSITimer:(NSTimer *)timer
-{
-    [self.bleShield readRSSI];
-}
-
-- (void)bleDidDisconnect
-{
-    [self.connectButton setTitle:@"Connect" forState:UIControlStateNormal];
-    [rssiTimer invalidate];
-}
-
--(void)bleDidConnect
-{
-    [self.connectButton setTitle:@"Disconnect" forState:UIControlStateNormal];
-    
-    rssiTimer = [NSTimer scheduledTimerWithTimeInterval:(float)1.0 target:self selector:@selector(readRSSITimer:) userInfo:nil repeats:YES];
-}
-
--(void)bleDidUpdateRSSI:(NSNumber *)rssi {
-}
-
 - (IBAction)bleConnectPressed:(id)sender {
-    if (self.bleShield.activePeripheral)
-    {
-        if (self.bleShield.activePeripheral.state == CBPeripheralStateConnected)
-        {
-            [[self.bleShield CM] cancelPeripheralConnection:[self.bleShield activePeripheral]];
-            return;
-        }
-    }
-    if (self.bleShield.peripherals) {
-        self.bleShield.peripherals = nil;
-    }
-    [self.bleShield findBLEPeripherals:3];
-    
-    [NSTimer scheduledTimerWithTimeInterval:(float)3.0 target:self selector:@selector(connectionTimer:) userInfo:nil repeats:NO];
-    
+    self.connectButton.titleLabel.text = @"Connecting...";
+    [self.connectButton.titleLabel sizeToFit];
+    [self.bluetooth connect];
 }
+
+#pragma mark - Bluetooth
+
+- (void)bluetoothConnectFinished:(BOOL)success {
+    if (success) {
+        self.connectButton.titleLabel.text = @"Disconnect";
+        [self.connectButton.titleLabel sizeToFit];
+    } else {
+        self.connectButton.titleLabel.text = @"Connect";
+        [self.connectButton sizeToFit];
+    }
+}
+
+- (void)dataReceived:(int)resistance :(int)temperature {
+    self.resistance = resistance;
+    self.temperature = temperature;
+}
+
 
 #pragma mark - Voice Commands
 
