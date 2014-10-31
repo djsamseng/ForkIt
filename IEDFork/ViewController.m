@@ -29,12 +29,12 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-    NSLog(@"VIEW DID LOAD CALLED");
     [super viewDidLoad];
     self.textReceived.text=NULL;
     self.resistance = 0;
     self.temperature = 0;
-    
+    [self.textReceived setEditable:NO];
+    [self.foodText setEditable:NO];
     if (self.bluetooth == nil) {
         self.bluetooth = [[IEDBluetoothBLE alloc] init];
         self.bluetooth.delegate = self;
@@ -51,7 +51,7 @@
     for (IEDFood *food in self.dataModel.allItems) {
         [allFoods appendFormat:@" %@", food.foodName];
     }
-    self.foodText.text = allFoods;
+    //self.foodText.text = allFoods;
     
     /*//Voice commands initialization
     LanguageModelGenerator *lmGenerator = [[LanguageModelGenerator alloc] init];
@@ -104,6 +104,8 @@
 - (IBAction)identifyPressed:(id)sender {
     NSString *result = [self.dataModel identifyFood:self.resistance];
     self.foodText.text = result;
+    [self.foodText setFont:[UIFont systemFontOfSize:36.0]];
+    [self.foodText setTextAlignment:NSTextAlignmentCenter];
 }
 
 - (IBAction)bleConnectPressed:(id)sender {
@@ -127,6 +129,8 @@
 - (void)dataReceived:(int)resistance :(int)temperature {
     self.resistance = resistance;
     self.temperature = temperature;
+    self.textReceived.text = [NSString stringWithFormat:@"%dΩ %dC", resistance, temperature];
+    [self.textReceived setFont:[UIFont systemFontOfSize:36.0]];
 }
 
 

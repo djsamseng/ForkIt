@@ -18,8 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TtW-vO-2u0">
-                                <rect key="frame" x="27" y="64" width="267" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TtW-vO-2u0">
+                                <rect key="frame" x="27" y="94" width="267" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <state key="normal" title="Connect">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -27,27 +28,9 @@
                                     <action selector="bleConnectPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="JUQ-6C-OwX"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uwI-lm-RMX">
-                                <rect key="frame" x="27" y="92" width="267" height="106"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="nCa-vT-ecH"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPP-Ye-CcT">
-                                <rect key="frame" x="126" y="216" width="68" height="30"/>
-                                <state key="normal" title="Add Entry">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="b4i-Bb-Sq6" kind="push" identifier="AddEntrySegue" id="j71-cv-stl"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kD-pc-EZ1">
-                                <rect key="frame" x="135" y="259" width="51" height="30"/>
+                                <rect key="frame" x="99" y="363" width="122" height="59"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <state key="normal" title="Identify">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -55,48 +38,59 @@
                                     <action selector="identifyPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dLL-gj-12o"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0xG-mC-Adq">
-                                <rect key="frame" x="41" y="303" width="239" height="80"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2FW-fS-jhN">
+                                <rect key="frame" x="35" y="143" width="251" height="52"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <textView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVn-St-sGp">
+                                <rect key="frame" x="39" y="248" width="243" height="107"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="107" id="Sdc-qD-ELe"/>
+                                </constraints>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="cPP-Ye-CcT" secondAttribute="centerX" id="3h8-1Z-wFT"/>
-                            <constraint firstAttribute="centerX" secondItem="uwI-lm-RMX" secondAttribute="centerX" id="9he-Wq-KpN"/>
-                            <constraint firstItem="0xG-mC-Adq" firstAttribute="top" secondItem="5kD-pc-EZ1" secondAttribute="bottom" constant="20" id="Enu-T4-PRF"/>
-                            <constraint firstItem="cPP-Ye-CcT" firstAttribute="top" secondItem="uwI-lm-RMX" secondAttribute="bottom" constant="20" id="HOr-rp-2Jm"/>
-                            <constraint firstItem="0xG-mC-Adq" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="25" id="LN1-IF-FCk"/>
-                            <constraint firstAttribute="centerX" secondItem="0xG-mC-Adq" secondAttribute="centerX" id="NSf-2B-njh"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="0xG-mC-Adq" secondAttribute="bottom" constant="97" id="Qul-Ir-8ip"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="TtW-vO-2u0" secondAttribute="trailing" constant="10" id="QyV-Xx-IPu"/>
-                            <constraint firstItem="TtW-vO-2u0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="11" id="Wle-q8-JAw"/>
-                            <constraint firstItem="5kD-pc-EZ1" firstAttribute="top" secondItem="cPP-Ye-CcT" secondAttribute="bottom" constant="8" id="dSx-U1-fdw"/>
-                            <constraint firstItem="uwI-lm-RMX" firstAttribute="leading" secondItem="TtW-vO-2u0" secondAttribute="leading" id="haA-Bw-c0V"/>
-                            <constraint firstItem="0xG-mC-Adq" firstAttribute="centerX" secondItem="uwI-lm-RMX" secondAttribute="centerX" id="rPi-1e-x30"/>
-                            <constraint firstAttribute="centerX" secondItem="5kD-pc-EZ1" secondAttribute="centerX" id="tih-Pg-Fk1"/>
-                            <constraint firstItem="uwI-lm-RMX" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="35" id="v0i-wH-FbP"/>
-                            <constraint firstItem="TtW-vO-2u0" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="z9g-If-HlJ"/>
+                            <constraint firstItem="TtW-vO-2u0" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="30" id="65c-Bb-XLi"/>
+                            <constraint firstAttribute="centerX" secondItem="VVn-St-sGp" secondAttribute="centerX" id="GRh-YQ-TWS"/>
+                            <constraint firstAttribute="centerX" secondItem="2FW-fS-jhN" secondAttribute="centerX" id="KhE-If-5Ai"/>
+                            <constraint firstAttribute="centerX" secondItem="TtW-vO-2u0" secondAttribute="centerX" id="LXc-oa-8YV"/>
+                            <constraint firstItem="2FW-fS-jhN" firstAttribute="top" secondItem="TtW-vO-2u0" secondAttribute="bottom" constant="20" id="gCU-Ih-425"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="5kD-pc-EZ1" secondAttribute="bottom" constant="60" id="keb-tv-vYg"/>
+                            <constraint firstItem="5kD-pc-EZ1" firstAttribute="top" secondItem="VVn-St-sGp" secondAttribute="bottom" constant="8" id="mIo-Z8-Kz1"/>
+                            <constraint firstAttribute="centerX" secondItem="5kD-pc-EZ1" secondAttribute="centerX" id="oUj-Ac-BLj"/>
+                            <constraint firstItem="VVn-St-sGp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="omM-HQ-OQA"/>
+                            <constraint firstItem="2FW-fS-jhN" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="wrY-hK-P7q"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Fork Buddy" id="74m-rj-sqc">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="We6-aB-Pwj">
-                            <connections>
-                                <segue destination="B3j-t6-oHO" kind="unwind" unwindAction="unwindToMenuViewController:" id="PVL-JX-uln"/>
-                            </connections>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="NpX-9H-eSn">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cPP-Ye-CcT">
+                                <rect key="frame" x="126" y="216" width="68" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Entry">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="b4i-Bb-Sq6" kind="push" identifier="AddEntrySegue" id="j71-cv-stl"/>
+                                </connections>
+                            </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="connectButton" destination="TtW-vO-2u0" id="mcb-cX-Kpi"/>
-                        <outlet property="foodText" destination="0xG-mC-Adq" id="Rx0-oC-RvB"/>
-                        <outlet property="textReceived" destination="uwI-lm-RMX" id="hUq-kP-NiJ"/>
+                        <outlet property="foodText" destination="VVn-St-sGp" id="23U-iW-or8"/>
+                        <outlet property="textReceived" destination="2FW-fS-jhN" id="20z-Ij-Wiw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <exit id="B3j-t6-oHO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1204" y="137"/>
         </scene>
