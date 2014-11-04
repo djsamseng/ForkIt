@@ -126,10 +126,15 @@
     }
 }
 
-- (void)dataReceived:(int)resistance :(int)temperature {
-    self.resistance = resistance;
-    self.temperature = temperature;
-    self.textReceived.text = [NSString stringWithFormat:@"%dΩ %dC", resistance, temperature];
+- (void)dataReceived:(int)value :(BOOL)isResistance :(BOOL)isResistance2 :(BOOL)isTemperature {
+    if (isResistance) {
+        self.resistance = value;
+    } else if (isResistance2) {
+        
+    } else if (isTemperature) {
+        self.temperature = value;
+    }
+    self.textReceived.text = [NSString stringWithFormat:@"%dΩ %dC", self.resistance, self.temperature];
     [self.textReceived setFont:[UIFont systemFontOfSize:36.0]];
 }
 

@@ -47,14 +47,17 @@
     NSData *d = [NSData dataWithBytes:data length:length];
     NSString *s = [[NSString alloc] initWithData:d encoding:NSUTF8StringEncoding];
     int resistanceEnd = [s rangeOfString:@"R"].location;
+    int resistance2End = [s rangeOfString:@"S"].location;
     int temperatureEnd = [s rangeOfString:@"T"].location;
-    if (resistanceEnd != 0 && temperatureEnd > resistanceEnd) {
+    if (resistanceEnd < 10) {
         NSString *resistance = [s substringToIndex:resistanceEnd];
-        NSRange temperatureRange;
-        temperatureRange.location = resistanceEnd + 1;
-        temperatureRange.length = temperatureEnd - resistanceEnd - 1;
-        NSString *temperature = [s substringWithRange:temperatureRange];
-        [self.delegate dataReceived:[resistance intValue] :[temperature intValue]];
+        [self.delegate dataReceived:[resistance intValue] :YES :NO :NO];
+    } else if (resistance2End < 10) {
+        NSString *resistance2 = [s substringToIndex:resistance2End];
+        [self.delegate dataReceived:[resistance2 intValue] :NO :YES :NO];
+    } else if (temperatureEnd < 10) {
+        NSString *temperature = [s substringToIndex:temperatureEnd];
+        [self.delegate dataReceived:[temperature intValue] :NO :NO :YES];
     }
 }
 

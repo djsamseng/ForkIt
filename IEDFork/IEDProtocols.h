@@ -11,6 +11,6 @@
 @protocol IEDBluetoothProtocols <NSObject>
 
 - (void)bluetoothConnectFinished: (BOOL)success;
-- (void)dataReceived: (int)resistance : (int)temperature;
+- (void)dataReceived: (int)value : (BOOL)isResistance : (BOOL)isResistance2 : (BOOL)isTemperature;
 
 @end
