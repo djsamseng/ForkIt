@@ -6,11 +6,13 @@
 //  Copyright (c) 2014 Samuel Seng. All rights reserved.
 //
 
+@import MessageUI;
 #import "IEDAddEntryTableViewController.h"
 #import "IEDFoodAttribute.h"
 
 
-@interface IEDAddEntryTableViewController () <UIAlertViewDelegate>
+
+@interface IEDAddEntryTableViewController () <UIAlertViewDelegate, MFMailComposeViewControllerDelegate>
 
 @property (strong, nonatomic) IEDFood *selectedFood;
 
@@ -20,13 +22,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.navigationController.toolbarHidden = NO;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    self.navigationController.toolbarHidden = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,6 +46,37 @@
     alertTextField.placeholder = @"New food";
     [alert setTag:1];
     [alert show];
+}
+- (IBAction)emailClicked:(id)sender {
+    if ([MFMailComposeViewController canSendMail]) {
+        MFMailComposeViewController *mailVC = [[MFMailComposeViewController alloc]  init];
+        mailVC.mailComposeDelegate = self;
+        
+        [mailVC setSubject:@"IED Fork Data"];
+        [mailVC setToRecipients:[NSArray arrayWithObject:@"djsamseng@gmail.com"]];
+        
+        NSMutableArray *allItems = [[NSMutableArray alloc] init];
+        for (IEDFood *food in self.dataModel.allItems) {
+            NSMutableArray *entries = [[NSMutableArray alloc] init];
+            for (IEDFoodAttribute *attribute in food.attributeValues) {
+                NSDictionary *d = @{@"resistance":[NSString stringWithFormat:@"%d",attribute.resistance ], @"resistivity":[NSString stringWithFormat:@"%d",attribute.resistivity], @"temperature":[NSString stringWithFormat:@"%d",attribute.temperature]};
+                [entries addObject:d];
+            }
+            NSDictionary *f = @{food.foodName:entries};
+            [allItems addObject:f];
+        }
+        NSError *error;
+        NSData *json = [NSJSONSerialization dataWithJSONObject:allItems options:kNilOptions error:&error];
+        NSString *jsonString = [[NSString alloc] initWithData:json encoding:NSJSONWritingPrettyPrinted];
+        [mailVC setMessageBody:jsonString isHTML:NO];
+        
+        [self presentViewController:mailVC animated:YES completion:nil];
+    }
+}
+
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+    NSLog(@"Finished with mail");
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
@@ -66,6 +103,7 @@
 - (void)addAttributeToFood:(IEDFood *)foodType {
     IEDFoodAttribute *attribute = [self.dataModel createAttribute:self.selectedFood];
     attribute.resistance = self.resistance;
+    attribute.resistivity = self.resistivity;
     attribute.temperature = self.temperature;
     [self.dataModel saveChanges];
 

@@ -19,6 +19,6 @@
 - (IEDFood *)createFood;
 - (IEDFoodAttribute *)createAttribute:(IEDFood *)foodType;
 - (BOOL)foodExists:(NSString *)foodName;
-- (NSString *)identifyFood:(int)resistance;
+- (NSString *)identifyFood:(int)resistance : (int)resistivity;
 
 @end

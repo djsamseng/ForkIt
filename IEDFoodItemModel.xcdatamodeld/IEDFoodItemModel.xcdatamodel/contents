@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6244" systemVersion="13E28" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6252" systemVersion="13E28" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="IEDFood" representedClassName="IEDFood" syncable="YES">
         <attribute name="foodName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
@@ -7,11 +7,12 @@
     </entity>
     <entity name="IEDFoodAttribute" representedClassName="IEDFoodAttribute" syncable="YES">
         <attribute name="resistance" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="resistivity" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="temperature" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="IEDFood" inverseName="attributeValues" inverseEntity="IEDFood" syncable="YES"/>
     </entity>
     <elements>
         <element name="IEDFood" positionX="-63" positionY="-18" width="128" height="88"/>
-        <element name="IEDFoodAttribute" positionX="-54" positionY="9" width="128" height="88"/>
+        <element name="IEDFoodAttribute" positionX="-54" positionY="9" width="128" height="105"/>
     </elements>
 </model>

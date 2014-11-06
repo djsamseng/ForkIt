@@ -14,6 +14,7 @@
 @property (strong, nonatomic) IEDDataModel *dataModel;
 
 @property (nonatomic) int resistance;
+@property (nonatomic) int resistivity;
 @property (nonatomic) int temperature;
 
 @end

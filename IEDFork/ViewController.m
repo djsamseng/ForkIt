@@ -17,8 +17,9 @@
 
 @property (strong, nonatomic) IBOutlet UITextView *textReceived;
 @property (strong, nonatomic) IBOutlet UITextView *foodText;
-@property (strong, nonatomic) IBOutlet UIButton *connectButton;
+@property (strong, nonatomic) IBOutlet UITextField *statusText;
 @property (nonatomic) int resistance;
+@property (nonatomic) int resistance2;
 @property (nonatomic) int temperature;
 
 @property (strong, nonatomic) IEDDataModel *dataModel;
@@ -30,11 +31,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.statusText setText:@"Status: Disconnected"];
+    self.statusText.textColor = [UIColor redColor];
     self.textReceived.text=NULL;
+    
     self.resistance = 0;
+    self.resistance2 = 0;
     self.temperature = 0;
     [self.textReceived setEditable:NO];
     [self.foodText setEditable:NO];
+    [self.statusText setEnabled:NO];
     if (self.bluetooth == nil) {
         self.bluetooth = [[IEDBluetoothBLE alloc] init];
         self.bluetooth.delegate = self;
@@ -93,6 +99,7 @@
         IEDAddEntryTableViewController *avc = [segue destinationViewController];
         avc.dataModel = self.dataModel;
         avc.resistance = self.resistance;
+        avc.resistivity = self.resistance2 - self.resistance;
         avc.temperature = self.temperature;
     }
 }
@@ -101,16 +108,27 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)identifyPressed:(id)sender {
-    NSString *result = [self.dataModel identifyFood:self.resistance];
+- (IBAction)mainViewTapped:(id)sender {
+    NSLog(@"Screen tapped");
+    [self identifyPressed];
+}
+- (void) identifyPressed {
+    NSString *result = [self.dataModel identifyFood:self.resistance :self.resistance2 - self.resistance];
     self.foodText.text = result;
     [self.foodText setFont:[UIFont systemFontOfSize:36.0]];
     [self.foodText setTextAlignment:NSTextAlignmentCenter];
 }
+- (IBAction)editTapped:(id)sender {
+    if (self.textReceived.hidden) {
+        [self.textReceived setHidden:NO];
+        [sender setSelected:YES];
+    } else {
+        [self.textReceived setHidden:YES];
+        [sender setSelected:NO];
+    }
+}
 
 - (IBAction)bleConnectPressed:(id)sender {
-    self.connectButton.titleLabel.text = @"Connecting...";
-    [self.connectButton.titleLabel sizeToFit];
     [self.bluetooth connect];
 }
 
@@ -118,23 +136,31 @@
 
 - (void)bluetoothConnectFinished:(BOOL)success {
     if (success) {
-        self.connectButton.titleLabel.text = @"Disconnect";
-        [self.connectButton.titleLabel sizeToFit];
+        [self.statusText setText:@"Status: Connected"];
+        [self.statusText setTextColor:[UIColor blackColor]];
+        [self.statusText sizeToFit];
     } else {
-        self.connectButton.titleLabel.text = @"Connect";
-        [self.connectButton sizeToFit];
+        [self.statusText setText:@"Status: Disconnected"];
+        [self.statusText setTextColor:[UIColor redColor]];
+        [self.statusText sizeToFit];
     }
+}
+
+- (void)bluetoothConnecting {
+    [self.statusText setText:@"Status: Connecting"];
+    [self.statusText setTextColor:[UIColor blackColor]];
+    [self.statusText sizeToFit];
 }
 
 - (void)dataReceived:(int)value :(BOOL)isResistance :(BOOL)isResistance2 :(BOOL)isTemperature {
     if (isResistance) {
         self.resistance = value;
     } else if (isResistance2) {
-        
+        self.resistance2 = value;
     } else if (isTemperature) {
         self.temperature = value;
     }
-    self.textReceived.text = [NSString stringWithFormat:@"%dΩ %dC", self.resistance, self.temperature];
+    self.textReceived.text = [NSString stringWithFormat:@"%dΩ %dΩ %dC", self.resistance, self.resistance2, self.temperature];
     [self.textReceived setFont:[UIFont systemFontOfSize:36.0]];
 }
 

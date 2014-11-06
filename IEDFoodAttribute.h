@@ -14,6 +14,7 @@
 @interface IEDFoodAttribute : NSManagedObject
 
 @property (nonatomic) int resistance;
+@property (nonatomic) int resistivity;
 @property (nonatomic) int temperature;
 @property (nonatomic, strong) IEDFood *relationship;
 

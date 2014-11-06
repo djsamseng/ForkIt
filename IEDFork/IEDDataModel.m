@@ -103,7 +103,8 @@
     [self.allItems removeObjectIdenticalTo:foodType];
 }
 
-- (NSString *)identifyFood:(int)resistance {
+- (NSString *)identifyFood:(int)resistance  : (int)resistivity{
+    //Resistivity currently unused
     NSMutableDictionary *attributes = [[NSMutableDictionary alloc] init];
     for (IEDFood *f in self.allItems) {
         for (IEDFoodAttribute *a in f.attributeValues) {

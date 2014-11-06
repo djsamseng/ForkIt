@@ -11,7 +11,8 @@
 
 @interface IEDBluetoothBLE()
 @property (strong, nonatomic) BLE *bleShield;
-
+@property (strong, nonatomic) NSTimer *autoConnectTimer;
+@property (nonatomic) BOOL isConnected;
 
 @end
 
@@ -25,8 +26,17 @@
         self.bleShield = [[BLE alloc] init];
         [self.bleShield controlSetup];
         self.bleShield.delegate = self;
+        self.isConnected = false;
+        self.autoConnectTimer = [NSTimer scheduledTimerWithTimeInterval:10.0 target:self selector:@selector(checkConnection) userInfo:nil repeats:YES];
+        self.autoConnectTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(checkConnection) userInfo:nil repeats:NO];
     }
     return self;
+}
+- (void)checkConnection {
+    if (!self.isConnected) {
+        NSLog(@"auto connecting");
+        [self connect];
+    }
 }
 
 #pragma mark - Bluetooth
@@ -71,16 +81,19 @@ NSTimer *rssiTimer;
 - (void)bleDidDisconnect
 {
     //[self.connectButton setTitle:@"Connect" forState:UIControlStateNormal];
-    [rssiTimer invalidate];
+    self.isConnected = NO;
     [self.delegate bluetoothConnectFinished:NO];
+    [rssiTimer invalidate];
+    
 }
 
 -(void)bleDidConnect
 {
     //[self.connectButton setTitle:@"Disconnect" forState:UIControlStateNormal];
-    
-    rssiTimer = [NSTimer scheduledTimerWithTimeInterval:(float)1.0 target:self selector:@selector(readRSSITimer:) userInfo:nil repeats:YES];
+    self.isConnected = YES;
     [self.delegate bluetoothConnectFinished:YES];
+    rssiTimer = [NSTimer scheduledTimerWithTimeInterval:(float)1.0 target:self selector:@selector(readRSSITimer:) userInfo:nil repeats:YES];
+    
 }
 
 -(void)bleDidUpdateRSSI:(NSNumber *)rssi {
@@ -101,6 +114,8 @@ NSTimer *rssiTimer;
     [self.bleShield findBLEPeripherals:3];
     
     [NSTimer scheduledTimerWithTimeInterval:(float)3.0 target:self selector:@selector(connectionTimer:) userInfo:nil repeats:NO];
+    
+    [self.delegate bluetoothConnecting];
 }
 
 
