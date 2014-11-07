@@ -11,7 +11,7 @@
 
 @implementation IEDNNModel
 
-- (id)initWithData:(IEDFood *)foodType :(int)distance {
+- (id)initWithData:(IEDFood *)foodType :(double)distance {
     self = [super init];
     if (self) {
         self.foodType = foodType;

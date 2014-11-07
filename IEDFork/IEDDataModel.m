@@ -7,6 +7,7 @@
 //
 
 #import "IEDDataModel.h"
+#import "IEDNNModel.h"
 @import CoreData;
 
 @interface IEDDataModel ()
@@ -103,54 +104,51 @@
     [self.allItems removeObjectIdenticalTo:foodType];
 }
 
-- (NSString *)identifyFood:(int)resistance  : (int)resistivity{
-    //Resistivity currently unused
-    NSMutableDictionary *attributes = [[NSMutableDictionary alloc] init];
-    for (IEDFood *f in self.allItems) {
-        for (IEDFoodAttribute *a in f.attributeValues) {
-            if (abs(a.resistance - resistance) < 500) {
-                if ([attributes objectForKey:f.foodName] == nil) {
-                    [attributes setObject:[NSNumber numberWithInt:1] forKey:f.foodName];
+- (NSString *)identifyFood:(int)resistance :(int)resistivity {
+    NSMutableDictionary *propertyDistances = [[NSMutableDictionary alloc] init];
+    for (IEDFood *food in self.allItems) {
+        for (IEDFoodAttribute *attribute in food.attributeValues) {
+            //int score = abs(attribute.resistance - resistance) + 3 * abs(attribute.resistivity - resistivity);
+            int score = abs(attribute.resistance - resistance);
+            double distance = score < 0.1 ? 1000.0 : 100.0 / score;
+            if (score < 500) {
+                if ([propertyDistances objectForKey:food.foodName] == nil) {
+                    
+                    IEDNNModel *NNModel = [[IEDNNModel alloc] initWithData:food :distance];
+                    propertyDistances[food.foodName] = NNModel;
                 } else {
-                    int count = [attributes[f.foodName] intValue];
-                    attributes[f.foodName] = [NSNumber numberWithInt:count + 1];
+                    ((IEDNNModel *)propertyDistances[food.foodName]).distance += distance;
                 }
             }
         }
     }
-    if ([attributes count] == 0) {
-        return @"None found within 200";
-    } else {
-        NSArray *sortedFoods = [attributes keysSortedByValueUsingComparator:^(id obj1, id obj2) {
-            if ([obj1 integerValue] > [obj2 integerValue]) {
-                return (NSComparisonResult)NSOrderedAscending;
-            } else if ([obj1 integerValue] < [obj2 integerValue]) {
-                return (NSComparisonResult)NSOrderedDescending;
-            }
-            return (NSComparisonResult)NSOrderedSame;
-        }];
-        if ([sortedFoods count] == 1) {
-            return [sortedFoods objectAtIndex:0];
-        } else if ([sortedFoods count] == 2) {
-            NSString *food0 = [sortedFoods objectAtIndex:0];
-            NSString *food1 = [sortedFoods objectAtIndex:1];
-            if ([attributes[food0] intValue] > [attributes[food1] intValue]) {
-                return [sortedFoods objectAtIndex:0];
-            } else {
-                return @"Unable to determine";
-            }
-        } else {
-            NSString *food0 = [sortedFoods objectAtIndex:0];
-            NSString *food1 = [sortedFoods objectAtIndex:1];
-            NSString *food2 = [sortedFoods objectAtIndex:2];
-            if ([attributes[food0] intValue] > [attributes[food1] intValue] + [attributes[food2] intValue]) {
-                return [sortedFoods objectAtIndex:0];
-            } else {
-                return @"Unable to determine";
-            }
+    NSArray *sortedFoods = [[propertyDistances allValues] sortedArrayUsingComparator: ^(id obj1, id obj2) {
+        IEDNNModel *left = (IEDNNModel *) obj1;
+        IEDNNModel *right = (IEDNNModel *) obj2;
+        if (left.distance > right.distance) {
+            return (NSComparisonResult)NSOrderedAscending;
+        } else if (left.distance < right.distance) {
+            return (NSComparisonResult)NSOrderedDescending;
         }
+        return (NSComparisonResult)NSOrderedSame;
+    }];
+    if ([sortedFoods count] == 0) {
+        return @"None found";
+    } else {
+        int k = ceil(sqrt([sortedFoods count]));
+        NSLog(@"K = %d", k);
+        double total_score = 0.0;
+        for (int i = 0; i < k; i++) {
+            IEDNNModel *model = [sortedFoods objectAtIndex:i];
+            total_score += model.distance;
+        }
+        NSMutableString *result = [[NSMutableString alloc] init];
+        for (int i = 0; i < k; i++) {
+            IEDNNModel *model = [sortedFoods objectAtIndex:i];
+            [result appendFormat:@"%@ %d%@\n", model.foodType.foodName, (int)(100.0 * model.distance / total_score), @"%"];
+        }
+        return result;
     }
-    return @"Error";
 }
 
 - (NSString *)itemArchivePath

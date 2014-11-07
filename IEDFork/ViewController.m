@@ -39,6 +39,7 @@
     self.resistance2 = 0;
     self.temperature = 0;
     [self.textReceived setEditable:NO];
+    [self.textReceived setHidden:YES];
     [self.foodText setEditable:NO];
     [self.statusText setEnabled:NO];
     if (self.bluetooth == nil) {
@@ -109,7 +110,6 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)mainViewTapped:(id)sender {
-    NSLog(@"Screen tapped");
     [self identifyPressed];
 }
 - (void) identifyPressed {
@@ -160,7 +160,7 @@
     } else if (isTemperature) {
         self.temperature = value;
     }
-    self.textReceived.text = [NSString stringWithFormat:@"%dΩ %dΩ %dC", self.resistance, self.resistance2, self.temperature];
+    self.textReceived.text = [NSString stringWithFormat:@"%dΩ %dΩ %dC", self.resistance, self.resistance - self.resistance2, self.temperature];
     [self.textReceived setFont:[UIFont systemFontOfSize:36.0]];
 }
 

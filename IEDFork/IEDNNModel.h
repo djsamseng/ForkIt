@@ -12,8 +12,8 @@
 @interface IEDNNModel : NSObject
 
 @property (strong, nonatomic) IEDFood *foodType;
-@property (nonatomic) int distance;
+@property (nonatomic) double distance;
 
-- (id)initWithData:(IEDFood *)foodType :(int) distance;
+- (id)initWithData:(IEDFood *)foodType :(double) distance;
 
 @end
