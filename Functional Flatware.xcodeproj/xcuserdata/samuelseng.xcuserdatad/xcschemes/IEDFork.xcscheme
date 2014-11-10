@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "17635E3D19F9CF5B00BAC03E"
-               BuildableName = "IEDFork.app"
-               BlueprintName = "IEDFork"
-               ReferencedContainer = "container:IEDFork.xcodeproj">
+               BuildableName = "Functional Flatware.app"
+               BlueprintName = "Functional Flatware"
+               ReferencedContainer = "container:Functional Flatware.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "17635E5919F9CF6100BAC03E"
-               BuildableName = "IEDForkTests.xctest"
-               BlueprintName = "IEDForkTests"
-               ReferencedContainer = "container:IEDFork.xcodeproj">
+               BuildableName = "Functional FlatwareTests.xctest"
+               BlueprintName = "Functional FlatwareTests"
+               ReferencedContainer = "container:Functional Flatware.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "17635E5919F9CF6100BAC03E"
-               BuildableName = "IEDForkTests.xctest"
-               BlueprintName = "IEDForkTests"
-               ReferencedContainer = "container:IEDFork.xcodeproj">
+               BuildableName = "Functional FlatwareTests.xctest"
+               BlueprintName = "Functional FlatwareTests"
+               ReferencedContainer = "container:Functional Flatware.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "17635E3D19F9CF5B00BAC03E"
-            BuildableName = "IEDFork.app"
-            BlueprintName = "IEDFork"
-            ReferencedContainer = "container:IEDFork.xcodeproj">
+            BuildableName = "Functional Flatware.app"
+            BlueprintName = "Functional Flatware"
+            ReferencedContainer = "container:Functional Flatware.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "17635E3D19F9CF5B00BAC03E"
-            BuildableName = "IEDFork.app"
-            BlueprintName = "IEDFork"
-            ReferencedContainer = "container:IEDFork.xcodeproj">
+            BuildableName = "Functional Flatware.app"
+            BlueprintName = "Functional Flatware"
+            ReferencedContainer = "container:Functional Flatware.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "17635E3D19F9CF5B00BAC03E"
-            BuildableName = "IEDFork.app"
-            BlueprintName = "IEDFork"
-            ReferencedContainer = "container:IEDFork.xcodeproj">
+            BuildableName = "Functional Flatware.app"
+            BlueprintName = "Functional Flatware"
+            ReferencedContainer = "container:Functional Flatware.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

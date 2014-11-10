@@ -31,6 +31,7 @@
 		178E161B19FDC54F001E79A4 /* IEDFood.m in Sources */ = {isa = PBXBuildFile; fileRef = 178E161A19FDC54F001E79A4 /* IEDFood.m */; };
 		178E161E19FDC691001E79A4 /* IEDDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 178E161D19FDC691001E79A4 /* IEDDataModel.m */; };
 		17BD9DCF1A030D8100E31CB8 /* IEDBluetoothBLE.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BD9DCE1A030D8100E31CB8 /* IEDBluetoothBLE.m */; };
+		17D615D71A105A30005BAE3A /* Wood_Board_Small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17D615D61A105A30005BAE3A /* Wood_Board_Small.jpg */; };
 		A73A87CD19FAF43700339FF2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73A87CC19FAF43700339FF2 /* AudioToolbox.framework */; };
 		A73A87CF19FAF44800339FF2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73A87CE19FAF44800339FF2 /* AVFoundation.framework */; };
 		A73A87D519FD87F100339FF2 /* AcousticModelEnglish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A73A87D119FD87F100339FF2 /* AcousticModelEnglish.bundle */; };
@@ -67,7 +68,7 @@
 		174AB8D119FFE07200AEEB12 /* IEDNNModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEDNNModel.m; sourceTree = "<group>"; };
 		174E135D19FF074D000727F2 /* IEDAddEntryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEDAddEntryTableViewController.h; sourceTree = "<group>"; };
 		174E135E19FF074D000727F2 /* IEDAddEntryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEDAddEntryTableViewController.m; sourceTree = "<group>"; };
-		17635E3E19F9CF5B00BAC03E /* IEDFork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IEDFork.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17635E3E19F9CF5B00BAC03E /* Functional Flatware.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Functional Flatware.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17635E4219F9CF5C00BAC03E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17635E4319F9CF5C00BAC03E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		17635E4519F9CF5D00BAC03E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -77,7 +78,7 @@
 		17635E4F19F9CF5E00BAC03E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		17635E5119F9CF5E00BAC03E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		17635E5419F9CF5E00BAC03E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		17635E5A19F9CF6100BAC03E /* IEDForkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IEDForkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17635E5A19F9CF6100BAC03E /* Functional FlatwareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Functional FlatwareTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17635E6A19F9CFDE00BAC03E /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		17635E6C19F9CFEB00BAC03E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		17635E6E19F9CFF400BAC03E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -95,6 +96,7 @@
 		17BD9DCD1A030D8100E31CB8 /* IEDBluetoothBLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEDBluetoothBLE.h; sourceTree = "<group>"; };
 		17BD9DCE1A030D8100E31CB8 /* IEDBluetoothBLE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEDBluetoothBLE.m; sourceTree = "<group>"; };
 		17BD9DD01A030FF000E31CB8 /* IEDProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEDProtocols.h; sourceTree = "<group>"; };
+		17D615D61A105A30005BAE3A /* Wood_Board_Small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Wood_Board_Small.jpg; sourceTree = "<group>"; };
 		A73A87CC19FAF43700339FF2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		A73A87CE19FAF44800339FF2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A73A87D119FD87F100339FF2 /* AcousticModelEnglish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AcousticModelEnglish.bundle; sourceTree = "<group>"; };
@@ -169,8 +171,8 @@
 		17635E3F19F9CF5B00BAC03E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				17635E3E19F9CF5B00BAC03E /* IEDFork.app */,
-				17635E5A19F9CF6100BAC03E /* IEDForkTests.xctest */,
+				17635E3E19F9CF5B00BAC03E /* Functional Flatware.app */,
+				17635E5A19F9CF6100BAC03E /* Functional FlatwareTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -188,6 +190,7 @@
 				17635E4E19F9CF5E00BAC03E /* Main.storyboard */,
 				174E135D19FF074D000727F2 /* IEDAddEntryTableViewController.h */,
 				174E135E19FF074D000727F2 /* IEDAddEntryTableViewController.m */,
+				17D615D61A105A30005BAE3A /* Wood_Board_Small.jpg */,
 				17635E5119F9CF5E00BAC03E /* Images.xcassets */,
 				17635E5319F9CF5E00BAC03E /* LaunchScreen.xib */,
 				178E161F19FDCF74001E79A4 /* Model */,
@@ -245,9 +248,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		17635E3D19F9CF5B00BAC03E /* IEDFork */ = {
+		17635E3D19F9CF5B00BAC03E /* Functional Flatware */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 17635E6419F9CF6100BAC03E /* Build configuration list for PBXNativeTarget "IEDFork" */;
+			buildConfigurationList = 17635E6419F9CF6100BAC03E /* Build configuration list for PBXNativeTarget "Functional Flatware" */;
 			buildPhases = (
 				17635E3A19F9CF5B00BAC03E /* Sources */,
 				17635E3B19F9CF5B00BAC03E /* Frameworks */,
@@ -257,14 +260,14 @@
 			);
 			dependencies = (
 			);
-			name = IEDFork;
+			name = "Functional Flatware";
 			productName = IEDFork;
-			productReference = 17635E3E19F9CF5B00BAC03E /* IEDFork.app */;
+			productReference = 17635E3E19F9CF5B00BAC03E /* Functional Flatware.app */;
 			productType = "com.apple.product-type.application";
 		};
-		17635E5919F9CF6100BAC03E /* IEDForkTests */ = {
+		17635E5919F9CF6100BAC03E /* Functional FlatwareTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 17635E6719F9CF6100BAC03E /* Build configuration list for PBXNativeTarget "IEDForkTests" */;
+			buildConfigurationList = 17635E6719F9CF6100BAC03E /* Build configuration list for PBXNativeTarget "Functional FlatwareTests" */;
 			buildPhases = (
 				17635E5619F9CF6100BAC03E /* Sources */,
 				17635E5719F9CF6100BAC03E /* Frameworks */,
@@ -275,9 +278,9 @@
 			dependencies = (
 				17635E5C19F9CF6100BAC03E /* PBXTargetDependency */,
 			);
-			name = IEDForkTests;
+			name = "Functional FlatwareTests";
 			productName = IEDForkTests;
-			productReference = 17635E5A19F9CF6100BAC03E /* IEDForkTests.xctest */;
+			productReference = 17635E5A19F9CF6100BAC03E /* Functional FlatwareTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -298,7 +301,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 17635E3919F9CF5B00BAC03E /* Build configuration list for PBXProject "IEDFork" */;
+			buildConfigurationList = 17635E3919F9CF5B00BAC03E /* Build configuration list for PBXProject "Functional Flatware" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -311,8 +314,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				17635E3D19F9CF5B00BAC03E /* IEDFork */,
-				17635E5919F9CF6100BAC03E /* IEDForkTests */,
+				17635E3D19F9CF5B00BAC03E /* Functional Flatware */,
+				17635E5919F9CF6100BAC03E /* Functional FlatwareTests */,
 			);
 		};
 /* End PBXProject section */
@@ -325,6 +328,7 @@
 				17635E5019F9CF5E00BAC03E /* Main.storyboard in Resources */,
 				A73A87D619FD87F100339FF2 /* AcousticModelSpanish.bundle in Resources */,
 				A73A87D519FD87F100339FF2 /* AcousticModelEnglish.bundle in Resources */,
+				17D615D71A105A30005BAE3A /* Wood_Board_Small.jpg in Resources */,
 				17635E5519F9CF5E00BAC03E /* LaunchScreen.xib in Resources */,
 				17635E5219F9CF5E00BAC03E /* Images.xcassets in Resources */,
 			);
@@ -376,7 +380,7 @@
 /* Begin PBXTargetDependency section */
 		17635E5C19F9CF6100BAC03E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 17635E3D19F9CF5B00BAC03E /* IEDFork */;
+			target = 17635E3D19F9CF5B00BAC03E /* Functional Flatware */;
 			targetProxy = 17635E5B19F9CF6100BAC03E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -489,7 +493,7 @@
 				INFOPLIST_FILE = IEDFork/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Functional Flatware";
 			};
 			name = Debug;
 		};
@@ -505,7 +509,7 @@
 				INFOPLIST_FILE = IEDFork/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Functional Flatware";
 			};
 			name = Release;
 		};
@@ -523,7 +527,7 @@
 				);
 				INFOPLIST_FILE = IEDForkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Functional FlatwareTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IEDFork.app/IEDFork";
 			};
 			name = Debug;
@@ -538,7 +542,7 @@
 				);
 				INFOPLIST_FILE = IEDForkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Functional FlatwareTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IEDFork.app/IEDFork";
 			};
 			name = Release;
@@ -546,7 +550,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		17635E3919F9CF5B00BAC03E /* Build configuration list for PBXProject "IEDFork" */ = {
+		17635E3919F9CF5B00BAC03E /* Build configuration list for PBXProject "Functional Flatware" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				17635E6219F9CF6100BAC03E /* Debug */,
@@ -555,7 +559,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		17635E6419F9CF6100BAC03E /* Build configuration list for PBXNativeTarget "IEDFork" */ = {
+		17635E6419F9CF6100BAC03E /* Build configuration list for PBXNativeTarget "Functional Flatware" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				17635E6519F9CF6100BAC03E /* Debug */,
@@ -564,7 +568,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		17635E6719F9CF6100BAC03E /* Build configuration list for PBXNativeTarget "IEDForkTests" */ = {
+		17635E6719F9CF6100BAC03E /* Build configuration list for PBXNativeTarget "Functional FlatwareTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				17635E6819F9CF6100BAC03E /* Debug */,

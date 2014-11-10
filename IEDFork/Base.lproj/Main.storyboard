@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Fork Buddy-->
+        <!--Functional Flatware-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -54,7 +54,7 @@
                             <outletCollection property="gestureRecognizers" destination="j91-0j-7ME" appends="YES" id="u36-ZX-tOP"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Fork Buddy" id="74m-rj-sqc">
+                    <navigationItem key="navigationItem" title="Functional Flatware" id="74m-rj-sqc">
                         <barButtonItem key="leftBarButtonItem" title="Edit" id="QrO-7d-OSv">
                             <connections>
                                 <action selector="editTapped:" destination="vXZ-lx-hvc" id="nrD-hv-sMN"/>
