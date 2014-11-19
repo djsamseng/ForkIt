@@ -17,6 +17,7 @@
 
 - (BOOL)saveChanges;
 - (IEDFood *)createFood;
+- (void)loadJSONData;
 - (IEDFoodAttribute *)createAttribute:(IEDFood *)foodType;
 - (BOOL)foodExists:(NSString *)foodName;
 - (NSString *)identifyFood:(int)resistance : (int)resistivity;

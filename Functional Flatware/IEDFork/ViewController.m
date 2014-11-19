@@ -60,11 +60,11 @@
     }
     
     //Model & Core Data intitialization
-    self.dataModel = [[IEDDataModel alloc] init];
+    if (self.dataModel == nil) {
+        self.dataModel = [[IEDDataModel alloc] init];
+    }
     if ([self.dataModel.allItems count] == 0) {
-        IEDFood *newFood = [self.dataModel createFood];
-        newFood.foodName = @"Test food";
-        [self.dataModel saveChanges];
+        [self.dataModel loadJSONData];
     }
     NSMutableString *allFoods = [[NSMutableString alloc] init];
     for (IEDFood *food in self.dataModel.allItems) {

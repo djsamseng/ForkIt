@@ -41,6 +41,18 @@
     return self;
 }
 
+- (void)loadJSONData {
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"food_data" ofType:@"json"];
+    NSData *jsonData = [NSData dataWithContentsOfFile:filePath];
+    NSError *error;
+    NSDictionary *results = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
+    if (error != nil){
+        NSLog(@"Error: %@", [error localizedDescription]);
+    } else {
+        NSLog(@"%@", results);
+    }
+}
+
 - (BOOL)saveChanges
 {
     NSError * error;
