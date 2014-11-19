@@ -15,8 +15,7 @@
 @interface ViewController ()
 
 
-
-@property (strong, nonatomic) IBOutlet UITextView *textReceived;
+@property (strong, nonatomic) IBOutlet UIImageView *plateView;
 @property (strong, nonatomic) IBOutlet UITextView *foodText;
 @property (strong, nonatomic) IBOutlet UITextField *statusText;
 @property (nonatomic) int resistance;
@@ -34,7 +33,9 @@
     [super viewDidLoad];
     [self.statusText setText:@"Status: Disconnected"];
     self.statusText.textColor = [UIColor redColor];
-    self.textReceived.text=NULL;
+    
+    CGFloat statusWidth = self.plateView.bounds.size.width * 0.8f;
+    [self.statusText setBounds:CGRectMake(self.statusText.bounds.origin.x, self.statusText.bounds.origin.y, statusWidth, self.statusText.bounds.size.height)];
     
     UIGraphicsBeginImageContext(self.view.frame.size);
     [[UIImage imageNamed:@"Wood_Board_Small.jpg"] drawInRect:self.view.bounds];
@@ -50,8 +51,6 @@
     self.resistance = 0;
     self.resistance2 = 0;
     self.temperature = 0;
-    [self.textReceived setEditable:NO];
-    [self.textReceived setHidden:YES];
     [self.foodText setEditable:NO];
     [self.statusText setEnabled:NO];
     if (self.bluetooth == nil) {
@@ -132,10 +131,6 @@
     [super viewWillDisappear:animated];
 }
 
-- (UIStatusBarStyle) preferredStatusBarStyle {
-    return UIStatusBarStyleLightContent;
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -144,24 +139,15 @@
     [self identifyPressed];
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
 - (void) identifyPressed {
     NSString *result = [self.dataModel identifyFood:self.resistance :self.resistance2];
     self.foodText.text = result;
     [self.foodText setFont:[UIFont systemFontOfSize:36.0]];
     [self.foodText setTextAlignment:NSTextAlignmentCenter];
-}
-- (IBAction)editTapped:(id)sender {
-    if (self.textReceived.hidden) {
-        [self.textReceived setHidden:NO];
-        [sender setSelected:YES];
-    } else {
-        [self.textReceived setHidden:YES];
-        [sender setSelected:NO];
-    }
-}
-
-- (IBAction)bleConnectPressed:(id)sender {
-    [self.bluetooth connect];
 }
 
 #pragma mark - Bluetooth
@@ -192,8 +178,10 @@
     } else if (isTemperature) {
         self.temperature = value;
     }
-    self.textReceived.text = [NSString stringWithFormat:@"%dΩ %dΩ %dC", self.resistance, self.resistance2, self.temperature];
-    [self.textReceived setFont:[UIFont systemFontOfSize:36.0]];
+}
+
+- (void)bluetoothAttemptConnect {
+    [self.bluetooth connect];
 }
 
 
@@ -231,14 +219,12 @@
     if([hypothesis isEqualToString:@"YES"])
     {
         [self.flite say:@"Welcome to Fork  It. Forblue tooth connection please say the command: Connect" withVoice:self.s];
-        self.textReceived.text= @"You said Yes";
         
         
     }
     if([hypothesis isEqualToString:@"CONNECT"]){
         
-        [self bleConnectPressed:nil];
-        self.textReceived.text= @"You said Connect";
+        //[self bleConnectPressed:nil];
     }
 }
 

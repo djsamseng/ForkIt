@@ -3,6 +3,7 @@
     <dependencies>
         <deployment version="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,66 +19,62 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4DN-I5-bg8">
-                                <rect key="frame" x="108" y="72" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Tap to identify" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVn-St-sGp">
-                                <rect key="frame" x="39" y="279" width="243" height="107"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="107" id="Sdc-qD-ELe"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WZx-AP-jWH">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" image="Plate_Small.png" translatesAutoresizingMaskIntoConstraints="NO" id="XNB-lB-p9b">
+                                <rect key="frame" x="16" y="66" width="288" height="354"/>
+                            </imageView>
+                            <textView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Tap to identify" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVn-St-sGp">
+                                <rect key="frame" x="45" y="105" width="230" height="276"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgw-Ua-zdC">
-                                <rect key="frame" x="40" y="122" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4DN-I5-bg8">
+                                <rect key="frame" x="147" y="28" width="26" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.67000000000000004" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="ZnY-AL-9aJ"/>
+                                    <constraint firstAttribute="height" constant="30" id="GR3-Q5-IhB"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FF Logo Wide.png" translatesAutoresizingMaskIntoConstraints="NO" id="a2A-Ie-bKJ">
-                                <rect key="frame" x="40" y="20" width="240" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="249" verticalCompressionResistancePriority="250" image="FF Logo Wide.png" translatesAutoresizingMaskIntoConstraints="NO" id="a2A-Ie-bKJ">
+                                <rect key="frame" x="-126" y="428" width="572" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="L8l-dc-mpR"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="VVn-St-sGp" secondAttribute="centerX" id="GRh-YQ-TWS"/>
-                            <constraint firstItem="VVn-St-sGp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="omM-HQ-OQA"/>
+                            <constraint firstAttribute="centerX" secondItem="XNB-lB-p9b" secondAttribute="centerX" id="9NZ-FL-HI9"/>
+                            <constraint firstItem="XNB-lB-p9b" firstAttribute="top" secondItem="4DN-I5-bg8" secondAttribute="bottom" constant="8" id="CJK-Xs-Ic0"/>
+                            <constraint firstAttribute="centerX" secondItem="VVn-St-sGp" secondAttribute="centerX" id="GG5-4V-3I9"/>
+                            <constraint firstAttribute="centerX" secondItem="VVn-St-sGp" secondAttribute="centerX" id="MaI-3i-hQI"/>
+                            <constraint firstItem="XNB-lB-p9b" firstAttribute="centerX" secondItem="VVn-St-sGp" secondAttribute="centerX" id="N09-j6-DLH"/>
+                            <constraint firstItem="a2A-Ie-bKJ" firstAttribute="top" secondItem="XNB-lB-p9b" secondAttribute="bottom" constant="8" id="OwL-fD-CNe"/>
+                            <constraint firstItem="XNB-lB-p9b" firstAttribute="width" secondItem="VVn-St-sGp" secondAttribute="height" multiplier="24:23" id="SIe-kG-2xz"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="a2A-Ie-bKJ" secondAttribute="bottom" constant="8" id="TCd-tj-wde"/>
+                            <constraint firstAttribute="centerX" secondItem="a2A-Ie-bKJ" secondAttribute="centerX" id="YUC-33-0wZ"/>
+                            <constraint firstItem="XNB-lB-p9b" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="lwU-qD-lPw"/>
+                            <constraint firstItem="XNB-lB-p9b" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="rU8-7x-rUd"/>
+                            <constraint firstItem="4DN-I5-bg8" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="rcc-tM-xET"/>
+                            <constraint firstItem="XNB-lB-p9b" firstAttribute="centerY" secondItem="VVn-St-sGp" secondAttribute="centerY" id="scq-RY-9qK"/>
                             <constraint firstAttribute="centerX" secondItem="4DN-I5-bg8" secondAttribute="centerX" id="uFe-aH-naf"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="j91-0j-7ME" appends="YES" id="u36-ZX-tOP"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="IED Fork Data Data" id="74m-rj-sqc" userLabel="Functional Flatware">
-                        <barButtonItem key="leftBarButtonItem" title="Edit" id="QrO-7d-OSv">
-                            <connections>
-                                <action selector="editTapped:" destination="vXZ-lx-hvc" id="nrD-hv-sMN"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="NpX-9H-eSn">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cPP-Ye-CcT">
-                                <rect key="frame" x="126" y="216" width="68" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add Entry">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="IED Fork Data Data" id="74m-rj-sqc" userLabel="Functional Flatware"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="foodText" destination="VVn-St-sGp" id="23U-iW-or8"/>
+                        <outlet property="plateView" destination="XNB-lB-p9b" id="Jdr-64-hTJ"/>
                         <outlet property="statusText" destination="4DN-I5-bg8" id="wyz-6J-u8n"/>
-                        <outlet property="textReceived" destination="dgw-Ua-zdC" id="XEf-Rx-kEM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -137,6 +134,7 @@
     </scenes>
     <resources>
         <image name="FF Logo Wide.png" width="572" height="301"/>
+        <image name="Plate_Small.png" width="800" height="803"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

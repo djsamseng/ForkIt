@@ -26,6 +26,7 @@
 		178E161819FDC525001E79A4 /* IEDFoodAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 178E161719FDC525001E79A4 /* IEDFoodAttribute.m */; };
 		178E161B19FDC54F001E79A4 /* IEDFood.m in Sources */ = {isa = PBXBuildFile; fileRef = 178E161A19FDC54F001E79A4 /* IEDFood.m */; };
 		178E161E19FDC691001E79A4 /* IEDDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 178E161D19FDC691001E79A4 /* IEDDataModel.m */; };
+		17B02D3A1A1CD9BD008E4A5A /* Plate_Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 17B02D391A1CD9BD008E4A5A /* Plate_Small.png */; };
 		17BD9DCF1A030D8100E31CB8 /* IEDBluetoothBLE.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BD9DCE1A030D8100E31CB8 /* IEDBluetoothBLE.m */; };
 		17D615D71A105A30005BAE3A /* Wood_Board_Small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17D615D61A105A30005BAE3A /* Wood_Board_Small.jpg */; };
 		486C336B9EE9738A5D6A2C62 /* libPods-Functional Flatware.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54DDBC57960AE9E96931C3DB /* libPods-Functional Flatware.a */; };
@@ -80,6 +81,7 @@
 		178E161A19FDC54F001E79A4 /* IEDFood.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IEDFood.m; path = ../IEDFood.m; sourceTree = "<group>"; };
 		178E161C19FDC691001E79A4 /* IEDDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEDDataModel.h; sourceTree = "<group>"; };
 		178E161D19FDC691001E79A4 /* IEDDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEDDataModel.m; sourceTree = "<group>"; };
+		17B02D391A1CD9BD008E4A5A /* Plate_Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Plate_Small.png; sourceTree = "<group>"; };
 		17BD9DCD1A030D8100E31CB8 /* IEDBluetoothBLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEDBluetoothBLE.h; sourceTree = "<group>"; };
 		17BD9DCE1A030D8100E31CB8 /* IEDBluetoothBLE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEDBluetoothBLE.m; sourceTree = "<group>"; };
 		17BD9DD01A030FF000E31CB8 /* IEDProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEDProtocols.h; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			children = (
 				17D615D61A105A30005BAE3A /* Wood_Board_Small.jpg */,
 				178A12FF1A1C30DB0006182D /* FF Logo Wide.png */,
+				17B02D391A1CD9BD008E4A5A /* Plate_Small.png */,
 				17635E5119F9CF5E00BAC03E /* Images.xcassets */,
 				17635E5319F9CF5E00BAC03E /* LaunchScreen.xib */,
 				17635E4219F9CF5C00BAC03E /* Info.plist */,
@@ -336,6 +339,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17B02D3A1A1CD9BD008E4A5A /* Plate_Small.png in Resources */,
 				17635E5019F9CF5E00BAC03E /* Main.storyboard in Resources */,
 				A73A87D619FD87F100339FF2 /* AcousticModelSpanish.bundle in Resources */,
 				A73A87D519FD87F100339FF2 /* AcousticModelEnglish.bundle in Resources */,
@@ -535,6 +539,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "Functional Flatware";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -552,6 +557,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "Functional Flatware";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

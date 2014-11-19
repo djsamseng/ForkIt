@@ -13,6 +13,7 @@
 @implementation IEDFoodAttribute
 
 @dynamic resistance;
+@dynamic resistivity;
 @dynamic temperature;
 @dynamic relationship;
 
