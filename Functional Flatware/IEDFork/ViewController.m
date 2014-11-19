@@ -40,6 +40,7 @@
     UIGraphicsBeginImageContext(self.view.frame.size);
     [[UIImage imageNamed:@"Wood_Board_Small.jpg"] drawInRect:self.view.bounds];
     //Credit: http://www.pageresource.com/wallpapers/4462/textures-wood-board-free-hd-wallpaper.html
+    //Plate Credit: http://www.worldmarket.com/product/white-coupe-square-salad-plate-set-of-4.do?&from=fn
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     self.view.backgroundColor = [UIColor colorWithPatternImage:image];
@@ -143,11 +144,15 @@
     return UIStatusBarStyleLightContent;
 }
 
-- (void) identifyPressed {
-    NSString *result = [self.dataModel identifyFood:self.resistance :self.resistance2];
-    self.foodText.text = result;
-    [self.foodText setFont:[UIFont systemFontOfSize:36.0]];
-    [self.foodText setTextAlignment:NSTextAlignmentCenter];
+- (void)identifyPressed {
+    if ([self.bluetooth isConnected]) {
+        NSString *result = [self.dataModel identifyFood:self.resistance :self.resistance2];
+        self.foodText.text = result;
+        [self.foodText setFont:[UIFont systemFontOfSize:36.0]];
+        [self.foodText setTextAlignment:NSTextAlignmentCenter];
+    } else {
+        [self.bluetooth connect];
+    }
 }
 
 #pragma mark - Bluetooth

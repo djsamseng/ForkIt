@@ -12,5 +12,6 @@
 
 @interface IEDBluetoothBLE : NSObject <BLEDelegate>
 @property (nonatomic, weak) id <IEDBluetoothProtocols> delegate;
+@property (readonly) BOOL isConnected;
 - (void)connect;
 @end
