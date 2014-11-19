@@ -46,10 +46,26 @@
     NSData *jsonData = [NSData dataWithContentsOfFile:filePath];
     NSError *error;
     NSDictionary *results = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
-    if (error != nil){
-        NSLog(@"Error: %@", [error localizedDescription]);
+    if (error == nil) {
+        for (NSDictionary *foodData in results) {
+            for (NSString *foodName in foodData) {
+                IEDFood *newFood = [self createFood];
+                newFood.foodName = foodName;
+                [self saveChanges];
+                for (NSDictionary *foodAttributes in foodData[foodName]) {
+                    if ([foodAttributes objectForKey:@"resistivity"] != nil && [foodAttributes objectForKey:@"resistance"] != nil && [foodAttributes objectForKey:@"temperature"] != nil) {
+                        IEDFoodAttribute *newAttribute = [self createAttribute:newFood];
+                        newAttribute.resistivity = [(NSString *)foodAttributes[@"resistivity"] intValue];
+                        newAttribute.resistance = [(NSString *)foodAttributes[@"resistance"] intValue];
+                        newAttribute.temperature = [(NSString *)foodAttributes[@"temperature"] intValue];
+                    }
+                }
+                [self saveChanges];
+            }
+        }
+        [self loadAllItems];
     } else {
-        NSLog(@"%@", results);
+        NSLog(@"Error: %@", [error localizedDescription]);
     }
 }
 
