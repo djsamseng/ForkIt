@@ -9,9 +9,8 @@
 #import "ViewController.h"
 #import "IEDDataModel.h"
 #import "IEDBluetoothBLE.h"
-#import "IEDAddEntryTableViewController.h"
 #import "AIDefaultConfiguration.h"
-#import "IEDCategoryViewController.h"
+#import "IEDCategoryTableViewController.h"
 
 @interface ViewController ()
 
@@ -44,8 +43,9 @@
     UIGraphicsEndImageContext();
     self.view.backgroundColor = [UIColor colorWithPatternImage:image];
     
-    [self.navigationController.navigationBar setTranslucent:YES];
-    [self.navigationController.navigationBar setShadowImage:image];
+    UISwipeGestureRecognizer *swipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeGestureHandler)];
+    [swipeRecognizer setDirection:UISwipeGestureRecognizerDirectionLeft];
+    [self.view addGestureRecognizer:swipeRecognizer];
     
     self.resistance = 0;
     self.resistance2 = 0;
@@ -117,18 +117,23 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"AddEntrySegue"]) {
-        IEDAddEntryTableViewController *avc = [segue destinationViewController];
-        avc.dataModel = self.dataModel;
-        avc.resistance = self.resistance;
-        avc.resistivity = self.resistance2;
-        avc.temperature = self.temperature;
-    } else if ([[segue identifier] isEqualToString:@"VoiceSegue"]) {
-        IEDCategoryViewController *cvc = [segue destinationViewController];
-        cvc.apiAI = self.apiAI;
-    }
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];
     
+}
+- (void)swipeGestureHandler {
+    IEDCategoryTableViewController *cvc = [self.storyboard instantiateViewControllerWithIdentifier:@"CategoryTableViewController"];
+    cvc.apiAI = self.apiAI;
+    [self.navigationController pushViewController:cvc animated:YES];
+}
+- (void)viewWillDisappear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:NO];
+    [super viewWillDisappear:animated];
+}
+
+- (UIStatusBarStyle) preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -138,6 +143,7 @@
 - (IBAction)mainViewTapped:(id)sender {
     [self identifyPressed];
 }
+
 - (void) identifyPressed {
     NSString *result = [self.dataModel identifyFood:self.resistance :self.resistance2];
     self.foodText.text = result;
