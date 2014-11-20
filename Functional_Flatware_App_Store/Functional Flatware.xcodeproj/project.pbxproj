@@ -1,0 +1,649 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1722C41C1A17D2F000B10ABA /* AIDefaultConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 1722C41B1A17D2F000B10ABA /* AIDefaultConfiguration.m */; };
+		1722C41F1A17D47600B10ABA /* IEDCategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1722C41E1A17D47600B10ABA /* IEDCategoryTableViewController.m */; };
+		174AB8D219FFE07200AEEB12 /* IEDNNModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 174AB8D119FFE07200AEEB12 /* IEDNNModel.m */; };
+		17635E4419F9CF5C00BAC03E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17635E4319F9CF5C00BAC03E /* main.m */; };
+		17635E4719F9CF5D00BAC03E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17635E4619F9CF5D00BAC03E /* AppDelegate.m */; };
+		17635E4D19F9CF5E00BAC03E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17635E4C19F9CF5E00BAC03E /* ViewController.m */; };
+		17635E5019F9CF5E00BAC03E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17635E4E19F9CF5E00BAC03E /* Main.storyboard */; };
+		17635E5219F9CF5E00BAC03E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17635E5119F9CF5E00BAC03E /* Images.xcassets */; };
+		17635E5519F9CF5E00BAC03E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17635E5319F9CF5E00BAC03E /* LaunchScreen.xib */; };
+		17635E6B19F9CFDE00BAC03E /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17635E6A19F9CFDE00BAC03E /* CoreBluetooth.framework */; };
+		17635E6D19F9CFEB00BAC03E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17635E6C19F9CFEB00BAC03E /* UIKit.framework */; };
+		17635E6F19F9CFF400BAC03E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17635E6E19F9CFF400BAC03E /* Foundation.framework */; };
+		17635E7119F9CFFB00BAC03E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17635E7019F9CFFB00BAC03E /* CoreGraphics.framework */; };
+		17635E7719F9D70500BAC03E /* BLE.m in Sources */ = {isa = PBXBuildFile; fileRef = 17635E7419F9D06400BAC03E /* BLE.m */; };
+		178A13001A1C30DC0006182D /* FF Logo Wide.png in Resources */ = {isa = PBXBuildFile; fileRef = 178A12FF1A1C30DB0006182D /* FF Logo Wide.png */; };
+		178E160619FDBF43001E79A4 /* IEDFoodItemModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 178E160419FDBF43001E79A4 /* IEDFoodItemModel.xcdatamodeld */; };
+		178E161819FDC525001E79A4 /* IEDFoodAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 178E161719FDC525001E79A4 /* IEDFoodAttribute.m */; };
+		178E161B19FDC54F001E79A4 /* IEDFood.m in Sources */ = {isa = PBXBuildFile; fileRef = 178E161A19FDC54F001E79A4 /* IEDFood.m */; };
+		178E161E19FDC691001E79A4 /* IEDDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 178E161D19FDC691001E79A4 /* IEDDataModel.m */; };
+		17AFA4931A1D475300901015 /* food_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 17AFA4921A1D475300901015 /* food_data.json */; };
+		17B02D3A1A1CD9BD008E4A5A /* Plate_Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 17B02D391A1CD9BD008E4A5A /* Plate_Small.png */; };
+		17BD9DCF1A030D8100E31CB8 /* IEDBluetoothBLE.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BD9DCE1A030D8100E31CB8 /* IEDBluetoothBLE.m */; };
+		17D615D71A105A30005BAE3A /* Wood_Board_Small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17D615D61A105A30005BAE3A /* Wood_Board_Small.jpg */; };
+		486C336B9EE9738A5D6A2C62 /* libPods-Functional Flatware.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54DDBC57960AE9E96931C3DB /* libPods-Functional Flatware.a */; };
+		A73A87CD19FAF43700339FF2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73A87CC19FAF43700339FF2 /* AudioToolbox.framework */; };
+		A73A87CF19FAF44800339FF2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73A87CE19FAF44800339FF2 /* AVFoundation.framework */; };
+		A73A87D519FD87F100339FF2 /* AcousticModelEnglish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A73A87D119FD87F100339FF2 /* AcousticModelEnglish.bundle */; };
+		A73A87D619FD87F100339FF2 /* AcousticModelSpanish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A73A87D219FD87F100339FF2 /* AcousticModelSpanish.bundle */; };
+		A73A87D719FD87F100339FF2 /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73A87D319FD87F100339FF2 /* OpenEars.framework */; };
+		A73A87D819FD87F100339FF2 /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73A87D419FD87F100339FF2 /* Slt.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		17635E5B19F9CF6100BAC03E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17635E3619F9CF5B00BAC03E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17635E3D19F9CF5B00BAC03E;
+			remoteInfo = IEDFork;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1722C41A1A17D2F000B10ABA /* AIDefaultConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIDefaultConfiguration.h; sourceTree = "<group>"; };
+		1722C41B1A17D2F000B10ABA /* AIDefaultConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIDefaultConfiguration.m; sourceTree = "<group>"; };
+		1722C41D1A17D47600B10ABA /* IEDCategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEDCategoryTableViewController.h; sourceTree = "<group>"; };
+		1722C41E1A17D47600B10ABA /* IEDCategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEDCategoryTableViewController.m; sourceTree = "<group>"; };
+		174AB8D019FFE07200AEEB12 /* IEDNNModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEDNNModel.h; sourceTree = "<group>"; };
+		174AB8D119FFE07200AEEB12 /* IEDNNModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEDNNModel.m; sourceTree = "<group>"; };
+		17635E3E19F9CF5B00BAC03E /* Functional Flatware.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Functional Flatware.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		17635E4219F9CF5C00BAC03E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17635E4319F9CF5C00BAC03E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		17635E4519F9CF5D00BAC03E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		17635E4619F9CF5D00BAC03E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		17635E4B19F9CF5E00BAC03E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		17635E4C19F9CF5E00BAC03E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		17635E4F19F9CF5E00BAC03E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		17635E5119F9CF5E00BAC03E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		17635E5419F9CF5E00BAC03E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		17635E5A19F9CF6100BAC03E /* Functional FlatwareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Functional FlatwareTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		17635E6A19F9CFDE00BAC03E /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		17635E6C19F9CFEB00BAC03E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		17635E6E19F9CFF400BAC03E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		17635E7019F9CFFB00BAC03E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		17635E7319F9D06400BAC03E /* BLE.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLE.h; sourceTree = "<group>"; };
+		17635E7419F9D06400BAC03E /* BLE.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLE.m; sourceTree = "<group>"; };
+		17635E7519F9D06400BAC03E /* BLEDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLEDefines.h; sourceTree = "<group>"; };
+		178A12FF1A1C30DB0006182D /* FF Logo Wide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FF Logo Wide.png"; sourceTree = "<group>"; };
+		178E160519FDBF43001E79A4 /* IEDFoodItemModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IEDFoodItemModel.xcdatamodel; sourceTree = "<group>"; };
+		178E161619FDC525001E79A4 /* IEDFoodAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IEDFoodAttribute.h; path = ../IEDFoodAttribute.h; sourceTree = "<group>"; };
+		178E161719FDC525001E79A4 /* IEDFoodAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IEDFoodAttribute.m; path = ../IEDFoodAttribute.m; sourceTree = "<group>"; };
+		178E161919FDC54F001E79A4 /* IEDFood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IEDFood.h; path = ../IEDFood.h; sourceTree = "<group>"; };
+		178E161A19FDC54F001E79A4 /* IEDFood.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IEDFood.m; path = ../IEDFood.m; sourceTree = "<group>"; };
+		178E161C19FDC691001E79A4 /* IEDDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEDDataModel.h; sourceTree = "<group>"; };
+		178E161D19FDC691001E79A4 /* IEDDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEDDataModel.m; sourceTree = "<group>"; };
+		17AFA4921A1D475300901015 /* food_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = food_data.json; sourceTree = "<group>"; };
+		17B02D391A1CD9BD008E4A5A /* Plate_Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Plate_Small.png; sourceTree = "<group>"; };
+		17BD9DCD1A030D8100E31CB8 /* IEDBluetoothBLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEDBluetoothBLE.h; sourceTree = "<group>"; };
+		17BD9DCE1A030D8100E31CB8 /* IEDBluetoothBLE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEDBluetoothBLE.m; sourceTree = "<group>"; };
+		17BD9DD01A030FF000E31CB8 /* IEDProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEDProtocols.h; sourceTree = "<group>"; };
+		17D615D61A105A30005BAE3A /* Wood_Board_Small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Wood_Board_Small.jpg; sourceTree = "<group>"; };
+		54DDBC57960AE9E96931C3DB /* libPods-Functional Flatware.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Functional Flatware.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		77A9215ECDED4E0FD7362E5C /* Pods-Functional Flatware.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Functional Flatware.release.xcconfig"; path = "Pods/Target Support Files/Pods-Functional Flatware/Pods-Functional Flatware.release.xcconfig"; sourceTree = "<group>"; };
+		7F06839C71CB20CBBF954358 /* Pods-Functional Flatware.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Functional Flatware.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Functional Flatware/Pods-Functional Flatware.debug.xcconfig"; sourceTree = "<group>"; };
+		A73A87CC19FAF43700339FF2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		A73A87CE19FAF44800339FF2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A73A87D119FD87F100339FF2 /* AcousticModelEnglish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AcousticModelEnglish.bundle; sourceTree = "<group>"; };
+		A73A87D219FD87F100339FF2 /* AcousticModelSpanish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AcousticModelSpanish.bundle; sourceTree = "<group>"; };
+		A73A87D319FD87F100339FF2 /* OpenEars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEars.framework; sourceTree = "<group>"; };
+		A73A87D419FD87F100339FF2 /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Slt.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		17635E3B19F9CF5B00BAC03E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A73A87D719FD87F100339FF2 /* OpenEars.framework in Frameworks */,
+				A73A87CF19FAF44800339FF2 /* AVFoundation.framework in Frameworks */,
+				A73A87CD19FAF43700339FF2 /* AudioToolbox.framework in Frameworks */,
+				17635E7119F9CFFB00BAC03E /* CoreGraphics.framework in Frameworks */,
+				A73A87D819FD87F100339FF2 /* Slt.framework in Frameworks */,
+				17635E6F19F9CFF400BAC03E /* Foundation.framework in Frameworks */,
+				17635E6D19F9CFEB00BAC03E /* UIKit.framework in Frameworks */,
+				17635E6B19F9CFDE00BAC03E /* CoreBluetooth.framework in Frameworks */,
+				486C336B9EE9738A5D6A2C62 /* libPods-Functional Flatware.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17635E5719F9CF6100BAC03E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17635E3519F9CF5B00BAC03E = {
+			isa = PBXGroup;
+			children = (
+				17635E4019F9CF5B00BAC03E /* IEDFork */,
+				17635E3F19F9CF5B00BAC03E /* Products */,
+				8B3BE6B93A0F9AB5DDA6FB1D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		17635E3F19F9CF5B00BAC03E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17635E3E19F9CF5B00BAC03E /* Functional Flatware.app */,
+				17635E5A19F9CF6100BAC03E /* Functional FlatwareTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		17635E4019F9CF5B00BAC03E /* IEDFork */ = {
+			isa = PBXGroup;
+			children = (
+				17635E4519F9CF5D00BAC03E /* AppDelegate.h */,
+				17635E4619F9CF5D00BAC03E /* AppDelegate.m */,
+				17BD9DD01A030FF000E31CB8 /* IEDProtocols.h */,
+				17635E4B19F9CF5E00BAC03E /* ViewController.h */,
+				17635E4C19F9CF5E00BAC03E /* ViewController.m */,
+				1722C41D1A17D47600B10ABA /* IEDCategoryTableViewController.h */,
+				1722C41E1A17D47600B10ABA /* IEDCategoryTableViewController.m */,
+				17635E4E19F9CF5E00BAC03E /* Main.storyboard */,
+				178A13011A1C31CD0006182D /* Voice */,
+				178A13021A1C32220006182D /* Bluetooth */,
+				178E161F19FDCF74001E79A4 /* Model */,
+				17635E4119F9CF5B00BAC03E /* Supporting Files */,
+			);
+			path = IEDFork;
+			sourceTree = "<group>";
+		};
+		17635E4119F9CF5B00BAC03E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				17D615D61A105A30005BAE3A /* Wood_Board_Small.jpg */,
+				178A12FF1A1C30DB0006182D /* FF Logo Wide.png */,
+				17B02D391A1CD9BD008E4A5A /* Plate_Small.png */,
+				17AFA4921A1D475300901015 /* food_data.json */,
+				17635E5119F9CF5E00BAC03E /* Images.xcassets */,
+				17635E5319F9CF5E00BAC03E /* LaunchScreen.xib */,
+				17635E4219F9CF5C00BAC03E /* Info.plist */,
+				17635E4319F9CF5C00BAC03E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		17635E7219F9D06400BAC03E /* BLE */ = {
+			isa = PBXGroup;
+			children = (
+				17635E7319F9D06400BAC03E /* BLE.h */,
+				17635E7419F9D06400BAC03E /* BLE.m */,
+				17635E7519F9D06400BAC03E /* BLEDefines.h */,
+			);
+			path = BLE;
+			sourceTree = "<group>";
+		};
+		178A13011A1C31CD0006182D /* Voice */ = {
+			isa = PBXGroup;
+			children = (
+				1722C41B1A17D2F000B10ABA /* AIDefaultConfiguration.m */,
+				1722C41A1A17D2F000B10ABA /* AIDefaultConfiguration.h */,
+			);
+			name = Voice;
+			sourceTree = "<group>";
+		};
+		178A13021A1C32220006182D /* Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				17BD9DCD1A030D8100E31CB8 /* IEDBluetoothBLE.h */,
+				17BD9DCE1A030D8100E31CB8 /* IEDBluetoothBLE.m */,
+			);
+			name = Bluetooth;
+			sourceTree = "<group>";
+		};
+		178E161F19FDCF74001E79A4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				178E161C19FDC691001E79A4 /* IEDDataModel.h */,
+				178E161D19FDC691001E79A4 /* IEDDataModel.m */,
+				174AB8D019FFE07200AEEB12 /* IEDNNModel.h */,
+				174AB8D119FFE07200AEEB12 /* IEDNNModel.m */,
+				178E160419FDBF43001E79A4 /* IEDFoodItemModel.xcdatamodeld */,
+				178E161619FDC525001E79A4 /* IEDFoodAttribute.h */,
+				178E161719FDC525001E79A4 /* IEDFoodAttribute.m */,
+				178E161919FDC54F001E79A4 /* IEDFood.h */,
+				178E161A19FDC54F001E79A4 /* IEDFood.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8B3BE6B93A0F9AB5DDA6FB1D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AFB2EF685E3F15F1C57A96B7 /* Pods */,
+				A73A87CE19FAF44800339FF2 /* AVFoundation.framework */,
+				A73A87CC19FAF43700339FF2 /* AudioToolbox.framework */,
+				17635E7219F9D06400BAC03E /* BLE */,
+				17635E7019F9CFFB00BAC03E /* CoreGraphics.framework */,
+				17635E6E19F9CFF400BAC03E /* Foundation.framework */,
+				17635E6C19F9CFEB00BAC03E /* UIKit.framework */,
+				17635E6A19F9CFDE00BAC03E /* CoreBluetooth.framework */,
+				A73A87D019FD87F100339FF2 /* OpenEarsFrameworks */,
+				54DDBC57960AE9E96931C3DB /* libPods-Functional Flatware.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A73A87D019FD87F100339FF2 /* OpenEarsFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A73A87D119FD87F100339FF2 /* AcousticModelEnglish.bundle */,
+				A73A87D219FD87F100339FF2 /* AcousticModelSpanish.bundle */,
+				A73A87D319FD87F100339FF2 /* OpenEars.framework */,
+				A73A87D419FD87F100339FF2 /* Slt.framework */,
+			);
+			name = OpenEarsFrameworks;
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		AFB2EF685E3F15F1C57A96B7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7F06839C71CB20CBBF954358 /* Pods-Functional Flatware.debug.xcconfig */,
+				77A9215ECDED4E0FD7362E5C /* Pods-Functional Flatware.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		17635E3D19F9CF5B00BAC03E /* Functional Flatware */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17635E6419F9CF6100BAC03E /* Build configuration list for PBXNativeTarget "Functional Flatware" */;
+			buildPhases = (
+				B44802CA18B647FE06C1A7C1 /* Check Pods Manifest.lock */,
+				17635E3A19F9CF5B00BAC03E /* Sources */,
+				17635E3B19F9CF5B00BAC03E /* Frameworks */,
+				17635E3C19F9CF5B00BAC03E /* Resources */,
+				F991199CE9BFBE45543DE8CC /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Functional Flatware";
+			productName = IEDFork;
+			productReference = 17635E3E19F9CF5B00BAC03E /* Functional Flatware.app */;
+			productType = "com.apple.product-type.application";
+		};
+		17635E5919F9CF6100BAC03E /* Functional FlatwareTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17635E6719F9CF6100BAC03E /* Build configuration list for PBXNativeTarget "Functional FlatwareTests" */;
+			buildPhases = (
+				17635E5619F9CF6100BAC03E /* Sources */,
+				17635E5719F9CF6100BAC03E /* Frameworks */,
+				17635E5819F9CF6100BAC03E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17635E5C19F9CF6100BAC03E /* PBXTargetDependency */,
+			);
+			name = "Functional FlatwareTests";
+			productName = IEDForkTests;
+			productReference = 17635E5A19F9CF6100BAC03E /* Functional FlatwareTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		17635E3619F9CF5B00BAC03E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Samuel Seng";
+				TargetAttributes = {
+					17635E3D19F9CF5B00BAC03E = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					17635E5919F9CF6100BAC03E = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = 17635E3D19F9CF5B00BAC03E;
+					};
+				};
+			};
+			buildConfigurationList = 17635E3919F9CF5B00BAC03E /* Build configuration list for PBXProject "Functional Flatware" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 17635E3519F9CF5B00BAC03E;
+			productRefGroup = 17635E3F19F9CF5B00BAC03E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				17635E3D19F9CF5B00BAC03E /* Functional Flatware */,
+				17635E5919F9CF6100BAC03E /* Functional FlatwareTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		17635E3C19F9CF5B00BAC03E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17AFA4931A1D475300901015 /* food_data.json in Resources */,
+				17B02D3A1A1CD9BD008E4A5A /* Plate_Small.png in Resources */,
+				17635E5019F9CF5E00BAC03E /* Main.storyboard in Resources */,
+				A73A87D619FD87F100339FF2 /* AcousticModelSpanish.bundle in Resources */,
+				A73A87D519FD87F100339FF2 /* AcousticModelEnglish.bundle in Resources */,
+				178A13001A1C30DC0006182D /* FF Logo Wide.png in Resources */,
+				17D615D71A105A30005BAE3A /* Wood_Board_Small.jpg in Resources */,
+				17635E5519F9CF5E00BAC03E /* LaunchScreen.xib in Resources */,
+				17635E5219F9CF5E00BAC03E /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17635E5819F9CF6100BAC03E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B44802CA18B647FE06C1A7C1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F991199CE9BFBE45543DE8CC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Functional Flatware/Pods-Functional Flatware-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		17635E3A19F9CF5B00BAC03E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17BD9DCF1A030D8100E31CB8 /* IEDBluetoothBLE.m in Sources */,
+				17635E7719F9D70500BAC03E /* BLE.m in Sources */,
+				178E160619FDBF43001E79A4 /* IEDFoodItemModel.xcdatamodeld in Sources */,
+				17635E4719F9CF5D00BAC03E /* AppDelegate.m in Sources */,
+				178E161E19FDC691001E79A4 /* IEDDataModel.m in Sources */,
+				174AB8D219FFE07200AEEB12 /* IEDNNModel.m in Sources */,
+				1722C41F1A17D47600B10ABA /* IEDCategoryTableViewController.m in Sources */,
+				178E161819FDC525001E79A4 /* IEDFoodAttribute.m in Sources */,
+				17635E4D19F9CF5E00BAC03E /* ViewController.m in Sources */,
+				178E161B19FDC54F001E79A4 /* IEDFood.m in Sources */,
+				1722C41C1A17D2F000B10ABA /* AIDefaultConfiguration.m in Sources */,
+				17635E4419F9CF5C00BAC03E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17635E5619F9CF6100BAC03E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		17635E5C19F9CF6100BAC03E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17635E3D19F9CF5B00BAC03E /* Functional Flatware */;
+			targetProxy = 17635E5B19F9CF6100BAC03E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		17635E4E19F9CF5E00BAC03E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17635E4F19F9CF5E00BAC03E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		17635E5319F9CF5E00BAC03E /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17635E5419F9CF5E00BAC03E /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		17635E6219F9CF6100BAC03E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		17635E6319F9CF6100BAC03E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		17635E6519F9CF6100BAC03E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F06839C71CB20CBBF954358 /* Pods-Functional Flatware.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework",
+				);
+				INFOPLIST_FILE = IEDFork/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "Functional Flatware";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		17635E6619F9CF6100BAC03E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77A9215ECDED4E0FD7362E5C /* Pods-Functional Flatware.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework",
+				);
+				INFOPLIST_FILE = IEDFork/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "Functional Flatware";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		17635E6819F9CF6100BAC03E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = IEDForkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "Functional FlatwareTests";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IEDFork.app/IEDFork";
+			};
+			name = Debug;
+		};
+		17635E6919F9CF6100BAC03E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = IEDForkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "Functional FlatwareTests";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IEDFork.app/IEDFork";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		17635E3919F9CF5B00BAC03E /* Build configuration list for PBXProject "Functional Flatware" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17635E6219F9CF6100BAC03E /* Debug */,
+				17635E6319F9CF6100BAC03E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17635E6419F9CF6100BAC03E /* Build configuration list for PBXNativeTarget "Functional Flatware" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17635E6519F9CF6100BAC03E /* Debug */,
+				17635E6619F9CF6100BAC03E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17635E6719F9CF6100BAC03E /* Build configuration list for PBXNativeTarget "Functional FlatwareTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17635E6819F9CF6100BAC03E /* Debug */,
+				17635E6919F9CF6100BAC03E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		178E160419FDBF43001E79A4 /* IEDFoodItemModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				178E160519FDBF43001E79A4 /* IEDFoodItemModel.xcdatamodel */,
+			);
+			currentVersion = 178E160519FDBF43001E79A4 /* IEDFoodItemModel.xcdatamodel */;
+			name = IEDFoodItemModel.xcdatamodeld;
+			path = ../IEDFoodItemModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 17635E3619F9CF5B00BAC03E /* Project object */;
+}
