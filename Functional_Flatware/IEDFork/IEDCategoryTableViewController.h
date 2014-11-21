@@ -10,12 +10,38 @@
 #import <ApiAI/ApiAI.h>
 #import <ApiAI/AIVoiceRequest.h>
 #import <MBProgressHUD/MBProgressHUD.h>
+#import <Slt/Slt.h>
+#import <OpenEars/FliteController.h>
+#import <OpenEars/LanguageModelGenerator.h>
+#import <OpenEars/PocketsphinxController.h>
 
-@interface IEDCategoryTableViewController : UITableViewController
+#import <OpenEars/AcousticModel.h>
 
+#import <OpenEars/OpenEarsEventsObserver.h>
+
+
+@interface IEDCategoryTableViewController : UITableViewController < OpenEarsEventsObserverDelegate>
 
 @property (nonatomic, strong) ApiAI *apiAI;
+
 @property (nonatomic, strong) AIVoiceRequest *voiceRequest;
 
+
+
+@property (strong, nonatomic) FliteController *fliteController;
+
+@property (strong, nonatomic) Slt *slt;
+
+
+
+@property (strong, nonatomic) OpenEarsEventsObserver *openEarsEventsObserver;
+
+
+
+@property (strong, nonatomic) NSArray *selection;
+
+
+
+@property (strong, nonatomic) NSString*choice;
 
 @end

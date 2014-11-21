@@ -12,6 +12,7 @@
 #import "AIDefaultConfiguration.h"
 #import "IEDCategoryTableViewController.h"
 
+
 @interface ViewController ()
 
 
@@ -77,37 +78,7 @@
     
     self.apiAI.configuration = configuration;
     
-    
-    /*//Voice commands initialization
-    LanguageModelGenerator *lmGenerator = [[LanguageModelGenerator alloc] init];
-    NSArray* words = [NSArray arrayWithObjects:@"YES", @"CONNECT", nil];
-    NSString*name = @"recognitionwords";
-    NSError *err = [lmGenerator generateLanguageModelFromArray:words withFilesNamed:name forAcousticModelAtPath:[AcousticModel pathToModel:@"AcousticModelEnglish"]];
-    
-    NSDictionary *languageGeneratorResults = nil;
-    
-    NSString *lmPath = nil;
-    NSString *dicPath = nil;
-    
-    if([err code] == noErr) {
-        
-        languageGeneratorResults = [err userInfo];
-		
-        lmPath = [languageGeneratorResults objectForKey:@"LMPath"];
-        dicPath = [languageGeneratorResults objectForKey:@"DictionaryPath"];
-		
-    } else {
-        NSLog(@"Error: %@",[err localizedDescription]);
-    }
-    
-    
-    [self.openEars setDelegate:self];
-    
-    [self.pocket startListeningWithLanguageModelAtPath:lmPath dictionaryAtPath:dicPath acousticModelAtPath:[AcousticModel pathToModel:@"AcousticModelEnglish"] languageModelIsJSGF:NO];*/
-    
-  
-    
-    //[self.flite say:@"For instructions say yes" withVoice:self.s];
+    [self.flite say:@"Tap       to       Identify" withVoice:self.s];
     
     
     // Do any additional setup after loading the view, typically from a nib.
@@ -121,6 +92,7 @@
 - (void)swipeGestureHandler {
     IEDCategoryTableViewController *cvc = [self.storyboard instantiateViewControllerWithIdentifier:@"CategoryTableViewController"];
     cvc.apiAI = self.apiAI;
+    cvc.selection=[NSArray arrayWithObjects:@"Meat",@"Milk",@"Fruit",@"Greens", nil];
     [self.navigationController pushViewController:cvc animated:YES];
 }
 - (void)viewWillDisappear:(BOOL)animated {
@@ -201,78 +173,8 @@
 	}
 	return self.slt;
 }
-- (PocketsphinxController *)pocket{
-	if (self.pocketsphinxController == nil) {
-		self.pocketsphinxController = [[PocketsphinxController alloc] init];
-	}
-	return self.pocketsphinxController;
-}
-- (OpenEarsEventsObserver *)openEars {
-	if (self.openEarsEventsObserver == nil) {
-		self.openEarsEventsObserver = [[OpenEarsEventsObserver alloc] init];
-	}
-	return self.openEarsEventsObserver;
-}
 
-- (void) pocketsphinxDidReceiveHypothesis:(NSString *)hypothesis recognitionScore:(NSString *)recognitionScore utteranceID:(NSString *)utteranceID {
-    
-	NSLog(@"The received hypothesis is %@ with a score of %@ and an ID of %@", hypothesis, recognitionScore, utteranceID);
-    if([hypothesis isEqualToString:@"YES"])
-    {
-        [self.flite say:@"Welcome to Fork  It. Forblue tooth connection please say the command: Connect" withVoice:self.s];
-        
-        
-    }
-    if([hypothesis isEqualToString:@"CONNECT"]){
-        
-        //[self bleConnectPressed:nil];
-    }
-}
 
-- (void) pocketsphinxDidStartCalibration {
-	NSLog(@"Pocketsphinx calibration has started.");
-}
-
-- (void) pocketsphinxDidCompleteCalibration {
-	NSLog(@"Pocketsphinx calibration is complete.");
-}
-
-- (void) pocketsphinxDidStartListening {
-	NSLog(@"Pocketsphinx is now listening.");
-}
-
-- (void) pocketsphinxDidDetectSpeech {
-    
-	NSLog(@"Pocketsphinx has detected speech.");
-    
-}
-
-- (void) pocketsphinxDidDetectFinishedSpeech {
-	NSLog(@"Pocketsphinx has detected a period of silence, concluding an utterance.");
-}
-
-- (void) pocketsphinxDidStopListening {
-	NSLog(@"Pocketsphinx has stopped listening.");
-}
-
-- (void) pocketsphinxDidSuspendRecognition {
-	NSLog(@"Pocketsphinx has suspended recognition.");
-}
-
-- (void) pocketsphinxDidResumeRecognition {
-	NSLog(@"Pocketsphinx has resumed recognition.");
-}
-
-- (void) pocketsphinxDidChangeLanguageModelToFile:(NSString *)newLanguageModelPathAsString andDictionary:(NSString *)newDictionaryPathAsString {
-	NSLog(@"Pocketsphinx is now using the following language model: \n%@ and the following dictionary: %@",newLanguageModelPathAsString,newDictionaryPathAsString);
-}
-
-- (void) pocketSphinxContinuousSetupDidFail { // This can let you know that something went wrong with the recognition loop startup. Turn on OPENEARSLOGGING to learn why.
-	NSLog(@"Setting up the continuous recognition loop has failed for some reason, please turn on OpenEarsLogging to learn more.");
-}
-- (void) testRecognitionCompleted {
-	NSLog(@"A test file that was submitted for recognition is now complete.");
-}
 
 
 @end

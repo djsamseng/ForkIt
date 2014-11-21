@@ -14,6 +14,7 @@
 @property (nonatomic, strong) NSMutableArray *allAssetTypes;
 @property (nonatomic, strong) NSManagedObjectContext *context;
 @property (nonatomic, strong) NSManagedObjectModel *model;
+@property (nonatomic, strong) NSNumber *versionNumber;
 @property (nonatomic) NSURLSession *session;
 @end
 @implementation IEDDataModel
@@ -49,6 +50,9 @@
 
 - (void)checkForUpdatedData {
     int version = 0;
+    if (self.versionNumber) {
+        version = [self.versionNumber intValue];
+    }
     NSString *requestString = [NSString stringWithFormat:@"http://functionalflatware.local/index.php?checkversion=true&version=%d", version];
     NSURL *url = [NSURL URLWithString:requestString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -143,6 +147,25 @@
             [NSException raise:@"Fetch failed" format:@"Reason: %@", [error localizedDescription]];
         }
         self.allItems = [[NSMutableArray alloc] initWithArray:result];
+    }
+}
+
+- (void)loadVersionNumber {
+    if (!self.versionNumber) {
+        NSFetchRequest *request = [[NSFetchRequest alloc] init];
+        
+        NSEntityDescription *e = [NSEntityDescription entityForName:@"IEDVersionNumber" inManagedObjectContext:self.context];
+        request.entity = e;
+        NSSortDescriptor *sd = [NSSortDescriptor sortDescriptorWithKey:@"order" ascending:YES];
+        request.sortDescriptors = @[sd];
+        NSError *error;
+        NSArray *result = [self.context executeFetchRequest:request error:&error];
+        if (!result) {
+            [NSException raise:@"Fetch failed" format:@"Reason: %@", [error localizedDescription]];
+        }
+        if ([ result count] > 0 && [[result objectAtIndex:0] isKindOfClass:[NSNumber class]]) {
+            self.versionNumber = [[NSNumber alloc] initWithInt:[(NSNumber *)[result objectAtIndex:0] intValue]];
+        }
     }
 }
 
