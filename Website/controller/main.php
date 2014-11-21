@@ -15,5 +15,8 @@ if (isset($_GET["updatedata"]) && htmlspecialchars($_GET["updatedata"]) == "true
     $json_file = file_get_contents("model/food_data.json");
     $json = json_decode($json_file, true);
     echo json_encode($json);
+    exit();
 }
+
+require_once("view/home.php");
 ?>
