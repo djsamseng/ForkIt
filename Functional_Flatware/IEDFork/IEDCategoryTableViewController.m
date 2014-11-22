@@ -15,6 +15,7 @@
 
 @interface IEDCategoryTableViewController ()
 @property (strong, nonatomic) NSTimer *autoConnectTimer;
+@property (nonatomic) BOOL categoryWasSet;
 @end
 
 @implementation IEDCategoryTableViewController
@@ -68,21 +69,25 @@
         if ([self containsString:newString :@"greens"]) {
             IEDNavigationController *nav = (IEDNavigationController*)self.navigationController;
             nav.category = @"greens";
+            self.categoryWasSet = YES;
             [self.navigationController popToRootViewControllerAnimated:YES];
             NSLog(@"%@", response);
         } else if ([self containsString:newString :@"milk"]) {
             IEDNavigationController *nav = (IEDNavigationController*)self.navigationController;
             nav.category = @"milk";
+            self.categoryWasSet = YES;
             [self.navigationController popToRootViewControllerAnimated:YES];
             NSLog(@"%@", response);
         } else if ([self containsString:newString :@"meat"]){
             NSLog(@"%@", response);
             IEDNavigationController *nav = (IEDNavigationController*)self.navigationController;
             nav.category = @"meat";
+            self.categoryWasSet = YES;
             [self.navigationController popToRootViewControllerAnimated:YES];
         }else if ([self containsString:newString :@"Fruit"]){
             IEDNavigationController *nav = (IEDNavigationController*)self.navigationController;
             nav.category = @"Fruit";
+            self.categoryWasSet = YES;
             [self.navigationController popToRootViewControllerAnimated:YES];
         }
         else{
@@ -102,8 +107,15 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    //[self.flite say:@"Say     a     category" withVoice:self.s];
     [self listenForCategory];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    if (!self.categoryWasSet) {
+        ((IEDNavigationController *)self.navigationController).category = @"";
+    }
+    self.categoryWasSet = NO;
+    [super viewWillDisappear:animated];
 }
 
 - (void)didReceiveMemoryWarning {

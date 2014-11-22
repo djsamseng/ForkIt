@@ -14,6 +14,7 @@
 @interface IEDDataModel : NSObject
 
 @property (strong, nonatomic) NSMutableArray *allItems;
+@property (strong, nonatomic) NSString *validCategory;
 
 - (BOOL)saveChanges;
 - (IEDFood *)createFood;

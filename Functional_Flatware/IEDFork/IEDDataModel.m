@@ -207,6 +207,23 @@
 - (NSString *)identifyFood:(int)resistance :(int)resistivity {
     NSMutableDictionary *propertyDistances = [[NSMutableDictionary alloc] init];
     for (IEDFood *food in self.allItems) {
+        if (self.validCategory != nil && ![self.validCategory isEqualToString:@""]) {
+            if ([self.validCategory isEqualToString:@"meat"]) {
+                if ([food.foodName isEqualToString:@"Turkey"]) {
+                    continue;
+                }
+            } else if ([self.validCategory isEqualToString:@"greens"]) {
+                
+            } else if ([self.validCategory isEqualToString:@"milk"]) {
+                if ([food.foodName rangeOfString:@"Cheese"].location < 100) {
+                    continue;
+                }
+            } else if ([self.validCategory isEqualToString:@"Fruit"]) {
+                if ([food.foodName isEqualToString:@"Melon"]) {
+                    continue;
+                }
+            }
+        }
         for (IEDFoodAttribute *attribute in food.attributeValues) {
             //int score = abs(attribute.resistance - resistance) + 3 * abs(attribute.resistivity - resistivity);
             int score = abs(attribute.resistance - resistance);

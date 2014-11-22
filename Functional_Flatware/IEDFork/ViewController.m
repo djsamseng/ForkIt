@@ -11,6 +11,7 @@
 #import "IEDBluetoothBLE.h"
 #import "AIDefaultConfiguration.h"
 #import "IEDCategoryTableViewController.h"
+#import "IEDNavigationController.h"
 
 
 @interface ViewController ()
@@ -87,7 +88,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES];
-    
+    self.dataModel.validCategory = ((IEDNavigationController *)self.navigationController).category;
 }
 - (void)swipeGestureHandler {
     IEDCategoryTableViewController *cvc = [self.storyboard instantiateViewControllerWithIdentifier:@"CategoryTableViewController"];
