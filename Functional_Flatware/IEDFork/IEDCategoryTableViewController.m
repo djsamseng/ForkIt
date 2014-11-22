@@ -83,6 +83,7 @@
             IEDNavigationController *nav = (IEDNavigationController*)self.navigationController;
             nav.category = @"meat";
             self.categoryWasSet = YES;
+            [self.flite say:@"Limiting  to  meat" withVoice:self.s];
             [self.navigationController popToRootViewControllerAnimated:YES];
         }else if ([self containsString:newString :@"Fruit"]){
             IEDNavigationController *nav = (IEDNavigationController*)self.navigationController;

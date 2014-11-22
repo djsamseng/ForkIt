@@ -209,17 +209,17 @@
     for (IEDFood *food in self.allItems) {
         if (self.validCategory != nil && ![self.validCategory isEqualToString:@""]) {
             if ([self.validCategory isEqualToString:@"meat"]) {
-                if ([food.foodName isEqualToString:@"Turkey"]) {
+                if (![food.foodName isEqualToString:@"Turkey"]) {
                     continue;
                 }
             } else if ([self.validCategory isEqualToString:@"greens"]) {
                 
             } else if ([self.validCategory isEqualToString:@"milk"]) {
-                if ([food.foodName rangeOfString:@"Cheese"].location < 100) {
+                if (!([food.foodName rangeOfString:@"Cheese"].location < 100)) {
                     continue;
                 }
             } else if ([self.validCategory isEqualToString:@"Fruit"]) {
-                if ([food.foodName isEqualToString:@"Melon"]) {
+                if (![food.foodName isEqualToString:@"Melon"]) {
                     continue;
                 }
             }

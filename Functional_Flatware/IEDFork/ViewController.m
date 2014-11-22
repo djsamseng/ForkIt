@@ -133,7 +133,7 @@
         [self.statusText setText:@"Status: Connected"];
         [self.statusText setTextColor:[UIColor blackColor]];
         [self.statusText sizeToFit];
-        [self.flite say:@"Tap to identify" withVoice:self.s];
+        [self.flite say:@"Tap to identify     or swipe to limit your options" withVoice:self.s];
     } else {
         [self.statusText setText:@"Status: Disconnected"];
         [self.statusText setTextColor:[UIColor redColor]];
