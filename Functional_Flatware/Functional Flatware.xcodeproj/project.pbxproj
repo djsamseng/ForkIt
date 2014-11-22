@@ -14,7 +14,6 @@
 		17635E4719F9CF5D00BAC03E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17635E4619F9CF5D00BAC03E /* AppDelegate.m */; };
 		17635E4D19F9CF5E00BAC03E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17635E4C19F9CF5E00BAC03E /* ViewController.m */; };
 		17635E5019F9CF5E00BAC03E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17635E4E19F9CF5E00BAC03E /* Main.storyboard */; };
-		17635E5219F9CF5E00BAC03E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17635E5119F9CF5E00BAC03E /* Images.xcassets */; };
 		17635E5519F9CF5E00BAC03E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17635E5319F9CF5E00BAC03E /* LaunchScreen.xib */; };
 		17635E6B19F9CFDE00BAC03E /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17635E6A19F9CFDE00BAC03E /* CoreBluetooth.framework */; };
 		17635E6D19F9CFEB00BAC03E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17635E6C19F9CFEB00BAC03E /* UIKit.framework */; };
@@ -66,7 +65,6 @@
 		17635E4B19F9CF5E00BAC03E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		17635E4C19F9CF5E00BAC03E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		17635E4F19F9CF5E00BAC03E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		17635E5119F9CF5E00BAC03E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		17635E5419F9CF5E00BAC03E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		17635E5A19F9CF6100BAC03E /* Functional FlatwareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Functional FlatwareTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17635E6A19F9CFDE00BAC03E /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
@@ -178,7 +176,6 @@
 				178A12FF1A1C30DB0006182D /* FF Logo Wide.png */,
 				17B02D391A1CD9BD008E4A5A /* Plate_Small.png */,
 				17AFA4921A1D475300901015 /* food_data.json */,
-				17635E5119F9CF5E00BAC03E /* Images.xcassets */,
 				17635E5319F9CF5E00BAC03E /* LaunchScreen.xib */,
 				17635E4219F9CF5C00BAC03E /* Info.plist */,
 				17635E4319F9CF5C00BAC03E /* main.m */,
@@ -360,7 +357,6 @@
 				178A13001A1C30DC0006182D /* FF Logo Wide.png in Resources */,
 				17D615D71A105A30005BAE3A /* Wood_Board_Small.jpg in Resources */,
 				17635E5519F9CF5E00BAC03E /* LaunchScreen.xib in Resources */,
-				17635E5219F9CF5E00BAC03E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,6 +542,7 @@
 			baseConfigurationReference = 7F06839C71CB20CBBF954358 /* Pods-Functional Flatware.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -564,6 +561,7 @@
 			baseConfigurationReference = 77A9215ECDED4E0FD7362E5C /* Pods-Functional Flatware.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
