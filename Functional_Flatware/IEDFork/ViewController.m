@@ -78,7 +78,7 @@
     
     self.apiAI.configuration = configuration;
     
-    [self.flite say:@"Tap       to       Identify" withVoice:self.s];
+    //[self.flite say:@"Tap       to       Identify" withVoice:self.s];
     
     
     // Do any additional setup after loading the view, typically from a nib.
@@ -118,6 +118,8 @@
         self.foodText.text = result;
         [self.foodText setFont:[UIFont systemFontOfSize:36.0]];
         [self.foodText setTextAlignment:NSTextAlignmentCenter];
+        NSString *voiceString = [NSString stringWithFormat:@"%@.      %d point %d degrees fahrenheit", result, self.temperature / 10, self.temperature % 10];
+        [self.flite say:voiceString withVoice:self.s];
     } else {
         [self.bluetooth connect];
     }
@@ -130,10 +132,12 @@
         [self.statusText setText:@"Status: Connected"];
         [self.statusText setTextColor:[UIColor blackColor]];
         [self.statusText sizeToFit];
+        [self.flite say:@"Tap to identify" withVoice:self.s];
     } else {
         [self.statusText setText:@"Status: Disconnected"];
         [self.statusText setTextColor:[UIColor redColor]];
         [self.statusText sizeToFit];
+        [self.flite say:@"Disconnected.         Turn on device      and tap to continue" withVoice:self.s];
     }
 }
 
@@ -141,6 +145,7 @@
     [self.statusText setText:@"Status: Connecting"];
     [self.statusText setTextColor:[UIColor blackColor]];
     [self.statusText sizeToFit];
+    [self.flite say:@"Connecting" withVoice:self.s];
 }
 
 - (void)dataReceived:(int)value :(BOOL)isResistance :(BOOL)isResistance2 :(BOOL)isTemperature {

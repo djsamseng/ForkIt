@@ -246,8 +246,7 @@
         for (int i = 0; i < k; i++) {
             IEDNNModel *model = [sortedFoods objectAtIndex:i];
             [result appendFormat:@"%@ %d%@\n", model.foodType.foodName, (int)(100.0 * model.distance / total_score), @"%"];
-        }
-        return result;
+        }        return result;
     }
 }
 

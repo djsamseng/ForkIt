@@ -64,7 +64,7 @@
         [self.delegate dataReceived:[resistance2 intValue] :NO :YES :NO];
     } else if (temperatureEnd < 10) {
         NSString *temperature = [s substringToIndex:temperatureEnd];
-        [self.delegate dataReceived:[temperature intValue] :NO :NO :YES];
+        [self.delegate dataReceived:floor([temperature intValue] * 1.8 + 320) :NO :NO :YES];
     }
 }
 
