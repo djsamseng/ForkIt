@@ -10,6 +10,7 @@
 		1722C41C1A17D2F000B10ABA /* AIDefaultConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 1722C41B1A17D2F000B10ABA /* AIDefaultConfiguration.m */; };
 		1722C41F1A17D47600B10ABA /* IEDCategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1722C41E1A17D47600B10ABA /* IEDCategoryTableViewController.m */; };
 		174AB8D219FFE07200AEEB12 /* IEDNNModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 174AB8D119FFE07200AEEB12 /* IEDNNModel.m */; };
+		174C6BDF1A211AA5004FEBDD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 174C6BDE1A211AA5004FEBDD /* Images.xcassets */; };
 		17635E4419F9CF5C00BAC03E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17635E4319F9CF5C00BAC03E /* main.m */; };
 		17635E4719F9CF5D00BAC03E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17635E4619F9CF5D00BAC03E /* AppDelegate.m */; };
 		17635E4D19F9CF5E00BAC03E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17635E4C19F9CF5E00BAC03E /* ViewController.m */; };
@@ -57,6 +58,7 @@
 		1722C41E1A17D47600B10ABA /* IEDCategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEDCategoryTableViewController.m; sourceTree = "<group>"; };
 		174AB8D019FFE07200AEEB12 /* IEDNNModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEDNNModel.h; sourceTree = "<group>"; };
 		174AB8D119FFE07200AEEB12 /* IEDNNModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEDNNModel.m; sourceTree = "<group>"; };
+		174C6BDE1A211AA5004FEBDD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		17635E3E19F9CF5B00BAC03E /* Functional Flatware.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Functional Flatware.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17635E4219F9CF5C00BAC03E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17635E4319F9CF5C00BAC03E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			children = (
 				17D615D61A105A30005BAE3A /* Wood_Board_Small.jpg */,
 				178A12FF1A1C30DB0006182D /* FF Logo Wide.png */,
+				174C6BDE1A211AA5004FEBDD /* Images.xcassets */,
 				17B02D391A1CD9BD008E4A5A /* Plate_Small.png */,
 				17AFA4921A1D475300901015 /* food_data.json */,
 				17635E5319F9CF5E00BAC03E /* LaunchScreen.xib */,
@@ -349,6 +352,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				174C6BDF1A211AA5004FEBDD /* Images.xcassets in Resources */,
 				17AFA4931A1D475300901015 /* food_data.json in Resources */,
 				17B02D3A1A1CD9BD008E4A5A /* Plate_Small.png in Resources */,
 				17635E5019F9CF5E00BAC03E /* Main.storyboard in Resources */,

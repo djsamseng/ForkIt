@@ -18,5 +18,20 @@ if (isset($_GET["updatedata"]) && htmlspecialchars($_GET["updatedata"]) == "true
     exit();
 }
 
-require_once("view/home.php");
+$page = "home";
+if (isset($_GET["page"])) {
+    $page = htmlspecialchars($_GET["page"]);
+}
+
+if ($page == "manual") {
+    require_once("view/manual.php");
+} else if ($page == "about") {
+    require_once("view/about.php");
+} else if ($page == "download") {
+    require_once("view/download.php");
+} else if ($page == "contact") {
+    require_once("view/contact.php");
+} else {
+    require_once("view/home.php");
+}
 ?>

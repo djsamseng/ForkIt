@@ -93,7 +93,8 @@
 - (void)swipeGestureHandler {
     IEDCategoryTableViewController *cvc = [self.storyboard instantiateViewControllerWithIdentifier:@"CategoryTableViewController"];
     cvc.apiAI = self.apiAI;
-    cvc.selection=[NSArray arrayWithObjects:@"Meat",@"Milk",@"Fruit",@"Greens", nil];
+    //cvc.selection=[NSArray arrayWithObjects:@"Meat",@"Milk",@"Fruit",@"Greens", nil];
+    cvc.selection=[NSArray arrayWithObjects:@"Meat", @"Dairy", @"Vegetables", @"Fruits", @"Legumes", @"Jarred Items", @"Deli Items", @"Cold Products", @"Uncooked foods", @"Cooked Foods", nil];
     [self.navigationController pushViewController:cvc animated:YES];
 }
 - (void)viewWillDisappear:(BOOL)animated {
@@ -129,17 +130,17 @@
 #pragma mark - Bluetooth
 
 - (void)bluetoothConnectFinished:(BOOL)success {
-    if (success) {
+    //if (success) {
         [self.statusText setText:@"Status: Connected"];
         [self.statusText setTextColor:[UIColor blackColor]];
         [self.statusText sizeToFit];
         [self.flite say:@"Tap to identify     or swipe to limit your options" withVoice:self.s];
-    } else {
+    /*} else {
         [self.statusText setText:@"Status: Disconnected"];
         [self.statusText setTextColor:[UIColor redColor]];
         [self.statusText sizeToFit];
         [self.flite say:@"Disconnected.         Turn on device      and tap to continue" withVoice:self.s];
-    }
+    }*/
 }
 
 - (void)bluetoothConnecting {
