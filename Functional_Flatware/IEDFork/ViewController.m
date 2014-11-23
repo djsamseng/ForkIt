@@ -19,6 +19,7 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView *plateView;
 @property (strong, nonatomic) IBOutlet UITextView *foodText;
+@property (strong, nonatomic) NSString *foodString;
 @property (strong, nonatomic) IBOutlet UITextField *statusText;
 @property (nonatomic) int resistance;
 @property (nonatomic) int resistance2;
@@ -56,6 +57,8 @@
     self.temperature = 0;
     [self.foodText setEditable:NO];
     [self.statusText setEnabled:NO];
+    self.foodString = @"Tap to identify";
+    self.foodText.text = self.foodString;
     if (self.bluetooth == nil) {
         self.bluetooth = [[IEDBluetoothBLE alloc] init];
         self.bluetooth.delegate = self;
@@ -85,10 +88,40 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)setFoodTextWithTopString {
+    if (self.dataModel.validCategory != nil && ![self.dataModel.validCategory isEqualToString:@""]) {
+        NSMutableAttributedString *currentText = [[NSMutableAttributedString alloc] initWithString:self.foodString];
+        [currentText addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:36.0] range:NSMakeRange(0, currentText.length)];
+        
+        NSMutableAttributedString *category = [[NSMutableAttributedString alloc] initWithString:self.dataModel.validCategory];
+        [category addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:24.0] range:NSMakeRange(0, [category length])];
+        [category addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:NSMakeRange(0, [category length])];
+        [currentText appendAttributedString:[[NSAttributedString alloc] initWithString:@"\n"]];
+        [currentText appendAttributedString:category];
+        
+        self.foodText.attributedText = currentText;
+    } else {
+        self.foodText.text = self.foodString;
+        [self.foodText setFont:[UIFont systemFontOfSize:36.0]];
+    }
+    [self.foodText setTextAlignment:NSTextAlignmentCenter];
+}
+
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES];
     self.dataModel.validCategory = ((IEDNavigationController *)self.navigationController).category;
+    [self setFoodTextWithTopString];
+    [super viewWillAppear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    if (self.dataModel.validCategory != nil && ![self.dataModel.validCategory isEqualToString:@""]) {
+        [self.flite say:[NSString stringWithFormat:@"Limiting   to   %@", self.dataModel.validCategory] withVoice:self.s];
+    } else if (self.dataModel.validCategory != nil) {
+        [self.flite say:@"Swipe Again" withVoice:self.s];
+    }
+    [super viewDidAppear:animated];
+    
 }
 - (void)swipeGestureHandler {
     IEDCategoryTableViewController *cvc = [self.storyboard instantiateViewControllerWithIdentifier:@"CategoryTableViewController"];
@@ -116,9 +149,8 @@
 - (void)identifyPressed {
     if ([self.bluetooth isConnected]) {
         NSString *result = [self.dataModel identifyFood:self.resistance :self.resistance2];
-        self.foodText.text = result;
-        [self.foodText setFont:[UIFont systemFontOfSize:36.0]];
-        [self.foodText setTextAlignment:NSTextAlignmentCenter];
+        self.foodString = result;
+        [self setFoodTextWithTopString];
         NSString *voiceString = [NSString stringWithFormat:@"%@.      %d point %d degrees fahrenheit", result, self.temperature / 10, self.temperature % 10];
         [self.flite say:voiceString withVoice:self.s];
     } else {
@@ -179,7 +211,6 @@
 	}
 	return self.slt;
 }
-
 
 
 

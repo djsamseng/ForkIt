@@ -208,13 +208,13 @@
     NSMutableDictionary *propertyDistances = [[NSMutableDictionary alloc] init];
     for (IEDFood *food in self.allItems) {
         if (self.validCategory != nil && ![self.validCategory isEqualToString:@""]) {
-            if ([self.validCategory isEqualToString:@"meat"]) {
+            if ([self.validCategory isEqualToString:@"Meat"]) {
                 if (![food.foodName isEqualToString:@"Turkey"]) {
                     continue;
                 }
-            } else if ([self.validCategory isEqualToString:@"greens"]) {
+            } else if ([self.validCategory isEqualToString:@"Greens"]) {
                 
-            } else if ([self.validCategory isEqualToString:@"milk"]) {
+            } else if ([self.validCategory isEqualToString:@"Milk"]) {
                 if (!([food.foodName rangeOfString:@"Cheese"].location < 100)) {
                     continue;
                 }

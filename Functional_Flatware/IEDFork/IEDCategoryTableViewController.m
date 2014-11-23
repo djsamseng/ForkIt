@@ -24,7 +24,10 @@
     
     [super viewDidLoad];
     
-    
+    UISwipeGestureRecognizer *recognizer;
+    recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe)];
+    recognizer.direction = UISwipeGestureRecognizerDirectionRight;
+    [self.tableView addGestureRecognizer:recognizer];
     
     // Uncomment the following line to preserve selection between presentations.
     
@@ -34,6 +37,10 @@
     
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+}
+
+- (void)handleSwipe {
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (FliteController *)flite {  //controls the voice
@@ -68,22 +75,21 @@
         NSString*newString=[response description];
         if ([self containsString:newString :@"greens"]) {
             IEDNavigationController *nav = (IEDNavigationController*)self.navigationController;
-            nav.category = @"greens";
+            nav.category = @"Greens";
             self.categoryWasSet = YES;
             [self.navigationController popToRootViewControllerAnimated:YES];
             NSLog(@"%@", response);
         } else if ([self containsString:newString :@"milk"]) {
             IEDNavigationController *nav = (IEDNavigationController*)self.navigationController;
-            nav.category = @"milk";
+            nav.category = @"Milk";
             self.categoryWasSet = YES;
             [self.navigationController popToRootViewControllerAnimated:YES];
             NSLog(@"%@", response);
         } else if ([self containsString:newString :@"meat"]){
             NSLog(@"%@", response);
             IEDNavigationController *nav = (IEDNavigationController*)self.navigationController;
-            nav.category = @"meat";
+            nav.category = @"Meat";
             self.categoryWasSet = YES;
-            [self.flite say:@"Limiting  to  meat" withVoice:self.s];
             [self.navigationController popToRootViewControllerAnimated:YES];
         }else if ([self containsString:newString :@"Fruit"]){
             IEDNavigationController *nav = (IEDNavigationController*)self.navigationController;
@@ -92,15 +98,14 @@
             [self.navigationController popToRootViewControllerAnimated:YES];
         }
         else{
+            
             [self.navigationController popToRootViewControllerAnimated:YES];
-            [self.flite say:@"Swipe Again" withVoice:self.s];
         }
         
     } failure:^(AIRequest *request, NSError *error) {
         // Handle error ...
         NSLog(@"@error");
-        [self.navigationController popToRootViewControllerAnimated:YES];
-        [self.flite say:@"Swipe Again" withVoice:self.s];
+        
     }];
     self.voiceRequest = request;
     [_apiAI enqueue:request];
@@ -112,6 +117,10 @@
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
+    if (self.voiceRequest != nil && [self.voiceRequest isExecuting]) {
+        [self.voiceRequest cancel];
+    }
+    self.voiceRequest = nil;
     if (!self.categoryWasSet) {
         ((IEDNavigationController *)self.navigationController).category = @"";
     }
