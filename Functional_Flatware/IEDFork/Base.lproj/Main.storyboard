@@ -91,7 +91,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1700" y="109"/>
+            <point key="canvasLocation" x="1604" y="137"/>
         </scene>
         <!--Category Table View Controller-->
         <scene sceneID="fNq-MT-aIJ">
@@ -181,7 +181,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WD7-6g-9Ua" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2160" y="137"/>
+            <point key="canvasLocation" x="1968" y="137"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fdD-nt-fSs">

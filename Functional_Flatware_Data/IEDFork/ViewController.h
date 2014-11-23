@@ -21,13 +21,11 @@
 
 #import <OpenEars/OpenEarsEventsObserver.h>
 
-#import <ApiAI/ApiAI.h>
 
 @interface ViewController : UIViewController < OpenEarsEventsObserverDelegate, IEDBluetoothProtocols>
     @property (strong, nonatomic) FliteController *fliteController;
     @property (strong, nonatomic) Slt *slt;
     @property (strong, nonatomic) PocketsphinxController *pocketsphinxController;
     @property (strong, nonatomic) OpenEarsEventsObserver *openEarsEventsObserver;
-    @property (nonatomic, strong) ApiAI *apiAI;
 @end
 

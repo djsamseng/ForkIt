@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3D417971-3B7A-45F9-B075-B143E1D2B59E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Functional Flatware Data</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6000D32E2FAB692108D46D18F517ABBB99CDDE05</key>
+		<string>https://github.com/djsamseng/FunctionalFlatware</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Functional_Flatware_Data/Functional Flatware Data.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6000D32E2FAB692108D46D18F517ABBB99CDDE05</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/djsamseng/FunctionalFlatware</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6000D32E2FAB692108D46D18F517ABBB99CDDE05</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6000D32E2FAB692108D46D18F517ABBB99CDDE05</string>
+			<key>IDESourceControlWCCName</key>
+			<string>IED_Functional_Flatware</string>
+		</dict>
+	</array>
+</dict>
+</plist>

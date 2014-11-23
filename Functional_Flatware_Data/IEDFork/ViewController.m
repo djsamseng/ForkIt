@@ -10,8 +10,6 @@
 #import "IEDDataModel.h"
 #import "IEDBluetoothBLE.h"
 #import "IEDAddEntryTableViewController.h"
-#import "AIDefaultConfiguration.h"
-#import "IEDCategoryViewController.h"
 
 @interface ViewController ()
 
@@ -72,15 +70,6 @@
     }
     //self.foodText.text = allFoods;
     
-    self.apiAI = [[ApiAI alloc] init];
-    
-    AIDefaultConfiguration *configuration = [[AIDefaultConfiguration alloc] init];
-    configuration.baseURL = [NSURL URLWithString:@"https://api.api.ai/v1"];
-    configuration.clientAccessToken = @"2e6fa27928fb4ab49750b5f55ac9bf00";
-    configuration.subscriptionKey = @"19cc0c9887134aefba18c72c487398f9";
-    
-    self.apiAI.configuration = configuration;
-    
     
     /*//Voice commands initialization
     LanguageModelGenerator *lmGenerator = [[LanguageModelGenerator alloc] init];
@@ -124,9 +113,6 @@
         avc.resistance = self.resistance;
         avc.resistivity = self.resistance2;
         avc.temperature = self.temperature;
-    } else if ([[segue identifier] isEqualToString:@"VoiceSegue"]) {
-        IEDCategoryViewController *cvc = [segue destinationViewController];
-        cvc.apiAI = self.apiAI;
     }
     
 }

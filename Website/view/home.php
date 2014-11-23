@@ -61,7 +61,7 @@
                     <hr>
                     <img class="img-responsive img-border img-left" src="view/img/download_small.jpg" alt="">
                     <hr class="visible-xs">
-                    <p>Download the iPhone application on the Apple App Store.  Click <a href="?page=manual">here</a> to view Functional Flatware in the Apple App Store.
+                    <p>Download the iPhone application on the Apple App Store.  Click <a href="?page=download">here</a> to view Functional Flatware in the Apple App Store.
                  </div>
             </div>
         </div>
