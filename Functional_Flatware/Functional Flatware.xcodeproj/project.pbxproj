@@ -11,6 +11,7 @@
 		1722C41F1A17D47600B10ABA /* IEDCategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1722C41E1A17D47600B10ABA /* IEDCategoryTableViewController.m */; };
 		174AB8D219FFE07200AEEB12 /* IEDNNModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 174AB8D119FFE07200AEEB12 /* IEDNNModel.m */; };
 		174C6BDF1A211AA5004FEBDD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 174C6BDE1A211AA5004FEBDD /* Images.xcassets */; };
+		174E2D2E1A23E91F00EDDC4E /* food_data_all.json in Resources */ = {isa = PBXBuildFile; fileRef = 174E2D2D1A23E91F00EDDC4E /* food_data_all.json */; };
 		17635E4419F9CF5C00BAC03E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17635E4319F9CF5C00BAC03E /* main.m */; };
 		17635E4719F9CF5D00BAC03E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17635E4619F9CF5D00BAC03E /* AppDelegate.m */; };
 		17635E4D19F9CF5E00BAC03E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17635E4C19F9CF5E00BAC03E /* ViewController.m */; };
@@ -59,6 +60,7 @@
 		174AB8D019FFE07200AEEB12 /* IEDNNModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEDNNModel.h; sourceTree = "<group>"; };
 		174AB8D119FFE07200AEEB12 /* IEDNNModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEDNNModel.m; sourceTree = "<group>"; };
 		174C6BDE1A211AA5004FEBDD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		174E2D2D1A23E91F00EDDC4E /* food_data_all.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = food_data_all.json; sourceTree = "<group>"; };
 		17635E3E19F9CF5B00BAC03E /* Functional Flatware.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Functional Flatware.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17635E4219F9CF5C00BAC03E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17635E4319F9CF5C00BAC03E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				178A12FF1A1C30DB0006182D /* FF Logo Wide.png */,
 				174C6BDE1A211AA5004FEBDD /* Images.xcassets */,
 				17B02D391A1CD9BD008E4A5A /* Plate_Small.png */,
+				174E2D2D1A23E91F00EDDC4E /* food_data_all.json */,
 				17AFA4921A1D475300901015 /* food_data.json */,
 				17635E5319F9CF5E00BAC03E /* LaunchScreen.xib */,
 				17635E4219F9CF5C00BAC03E /* Info.plist */,
@@ -357,6 +360,7 @@
 				17B02D3A1A1CD9BD008E4A5A /* Plate_Small.png in Resources */,
 				17635E5019F9CF5E00BAC03E /* Main.storyboard in Resources */,
 				A73A87D619FD87F100339FF2 /* AcousticModelSpanish.bundle in Resources */,
+				174E2D2E1A23E91F00EDDC4E /* food_data_all.json in Resources */,
 				A73A87D519FD87F100339FF2 /* AcousticModelEnglish.bundle in Resources */,
 				178A13001A1C30DC0006182D /* FF Logo Wide.png in Resources */,
 				17D615D71A105A30005BAE3A /* Wood_Board_Small.jpg in Resources */,

@@ -19,11 +19,20 @@
                     <hr>
                 </div>
                 <div class="col-lg-12 text-center">
+                    <h2>Product Demonstration
+                    </h2>
+                    <iframe width="560" height="315" src="//www.youtube.com/embed/H-rVur1c1Qg" frameborder="0" allowfullscreen></iframe>
+                    <br><br>
+                    <a href="https://www.youtube.com/watch?v=H-rVur1c1Qg" class="btn btn-default btn-lg">View on Youtube</a>
+                    <hr>
+                </div>
+
+                <div class="col-lg-12 text-center">
                     <h2>Written Manual
                         <br>
                     </h2>
-                    <p>A written User Manual is in the works!</p>
-                    <a href="#" class="btn btn-default btn-lg">Coming Soon</a>
+                    <p>Click below to download the manual</p>
+                    <a href="/Functional_Flatware_Manual.pdf" class="btn btn-default btn-lg">Download</a>
                     <hr>
                 </div>
             </div>
