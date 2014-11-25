@@ -77,7 +77,7 @@
     
     AIDefaultConfiguration *configuration = [[AIDefaultConfiguration alloc] init];
     configuration.baseURL = [NSURL URLWithString:@"https://api.api.ai/v1"];
-    configuration.clientAccessToken = @"2e6fa27928fb4ab49750b5f55ac9bf00";
+    configuration.clientAccessToken = @"c50333bd598942d291d2b8dd240a15b6";
     configuration.subscriptionKey = @"19cc0c9887134aefba18c72c487398f9";
     
     self.apiAI.configuration = configuration;

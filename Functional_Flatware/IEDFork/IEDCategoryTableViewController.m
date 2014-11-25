@@ -105,6 +105,15 @@
     } failure:^(AIRequest *request, NSError *error) {
         // Handle error ...
         NSLog(@"@error");
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                            message:[error localizedDescription]
+                                                           delegate:nil
+                                                  cancelButtonTitle:nil
+                                                  otherButtonTitles:nil];
+        
+        [alertView show];
+        [NSThread sleepForTimeInterval:3];
+        [alertView dismissWithClickedButtonIndex:0 animated:YES];
         
     }];
     self.voiceRequest = request;

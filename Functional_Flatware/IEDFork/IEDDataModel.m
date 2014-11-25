@@ -213,9 +213,11 @@
                     continue;
                 }
             } else if ([self.validCategory isEqualToString:@"Greens"]) {
-                
+                if (![food.foodName isEqualToString:@"Olive"]) {
+                    continue;
+                }
             } else if ([self.validCategory isEqualToString:@"Milk"]) {
-                if (!([food.foodName rangeOfString:@"Cheese"].location < 100)) {
+                if (![food.foodName isEqualToString:@"Cheese"]) {
                     continue;
                 }
             } else if ([self.validCategory isEqualToString:@"Fruit"]) {
